@@ -2061,7 +2061,7 @@ p.has-large-font-size {
 }
 .hero-slider,
 .hero-slider .single-slider{
-	height:680px;
+	height:593px;
 }
 .hero-slider .single-slider {
 	background-size: cover;
@@ -2100,11 +2100,12 @@ p.has-large-font-size {
 }
 .hero-slider .hero-text h1 {
     color: #2E2751;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     line-height: 65px;
     margin-bottom: 20px;
     padding-bottom: 20px;
+    text-align: initial;
 }
 .hero-slider .hero-text h1::before {
     content: "";

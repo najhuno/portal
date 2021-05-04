@@ -57,5 +57,10 @@ class User extends Authenticatable
         return 'profile/username';
     }
 
+    public function pegawai()
+    {
+        $this->hasMany('App\Models\Pegawai');
+    }
+
     
 }

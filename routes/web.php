@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\HomeController;
-use App\Http\Controllers\User\UserController;
+use App\Http\Controllers\backend\UserController;
 use App\Http\Controllers\backend\BackendController;
 
 /*
@@ -17,37 +17,28 @@ use App\Http\Controllers\backend\BackendController;
 */
 
 
-// Auth::routes();
-
-// Route::middleware(['auth'])->group( function (){
-
-Route::get('/', function () {
-    return view('welcome');
-});
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-
-
-
-// });
-
 Auth::routes();
 
 Route::middleware(['auth'])->group( function (){
+
     Route::prefix('backend')->group( function (){
         Route::get('/', [BackendController::class, 'index'])->name('backend');
-        // Route::get('/create', [BackendController::class, 'create'])->name('user.create');
-        // Route::get('/{id}/edit', [BackendController::class, 'edit'])->name('user.edit');
-        // Route::post('/store', [BackendController::class, 'store'])->name('user.store');
-    });
-
-    Route::prefix('backend/user')->group( function (){
-        Route::get('', [UserController::class, 'index'])->name('user.home');
-        Route::get('/create', [UserController::class, 'create'])->name('user.create');
+        Route::get('/user', [UserController::class, 'index'])->name('user.index');
+        Route::get('/create', [BackendController::class, 'create'])->name('user.create');
         Route::get('/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
         Route::post('/store', [UserController::class, 'store'])->name('user.store');
+        // content utama //
+        Route::get('/contentutama', [BackendController::class, 'contentutama'])->name('backend.contentutama');
+        Route::get('/getcontentutama', [BackendController::class, 'getcontentutama'])->name('backend.getcontentutama');
+        Route::post('/edit-content', [BackendController::class, 'editcontentutama'])->name('backend.editcontentutama');
+        Route::post('/delete-content', [BackendController::class, 'deletecontentutama'])->name('backend.deletecontentutama');
+        Route::post('/store-content', [BackendController::class, 'storecontentutama'])->name('backend.storecontentutama');
+        
+        
     });
 });
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

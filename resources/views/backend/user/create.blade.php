@@ -1,8 +1,5 @@
-@section('title', 'Dashboard')
+@extends('adminlte::page')
 
-@section('content_header')
-    <h1>User</h1>
-@stop
 
 @section('content')
 <div class="col-md-12">
@@ -17,7 +14,7 @@
                             <button class="btn btn-info btn-sm">
                                 <i class="fas fa-save"></i>
                             </button>
-                            <a href="{{ route('user.home')}}" class="btn btn-danger btn-sm">
+                            <a href="{{ route('user.index')}}" class="btn btn-danger btn-sm">
                                 <i class="fas fa-times-circle"></i>
                             </a>
                         </div>
@@ -57,10 +54,8 @@
             </form>
         </div>
 </div>
-@endsection
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
+
 
 @section('js')
     <script> console.log('Hi!'); </script>

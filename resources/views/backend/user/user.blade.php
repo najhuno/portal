@@ -28,35 +28,36 @@
                         <th>Nama</th>
                         <th>Email</th>
                         <th>Role</th>
+                        <th>Pekerjaan</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Aris</td>
-                        <td>sunjayaaris@gmail.com</td>
-                        <td>Admin</td>
-                        <td class="d-flex align-items-center">
-                            <div class="btn-group d-flex align-items-center">
-                                <a class="btn btn-info btn-sm" href="{{ route('user.edit',['id' => 'Aris'])}}">
-                                    <i class="fas fa-pencil-alt"></i>
-                                </a>
-                                <button class="btn btn-danger btn-sm">
-                                    <i class="fas fa-trash-alt"></i>
-                                </button>
-                            </div>
-                        </td>
-                    </tr>
+                    @foreach ($pegawai as $item)
+                        <tr>
+                            <td>{{ $item->nama }}</td>
+                            <td>{{ isset($item->user['email']) ? $item->user['email'] : "" }}</td>
+                            <td>{{ isset($item->user['name']) ? $item->user['name'] : "" }}</td>
+                            <td>{{ $item->posisi_pekerjaan }}</td>
+                            <td class="d-flex align-items-center">
+                                <div class="btn-group d-flex align-items-center">
+                                    <a class="btn btn-info btn-sm" href="{{ route('user.edit',['id' => $item->id ])}}">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </a>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
+                    
                 </tbody>
             </table>
         </div>
     </div>
 </div>
 @endsection
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
 @section('js')
-    <script> console.log('Hi!'); </script>
+    <script> console.log('gooo!'); </script>
 @stop

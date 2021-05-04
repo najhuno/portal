@@ -1,8 +1,5 @@
-@section('title', 'Dashboard')
+@extends('adminlte::page')
 
-@section('content_header')
-    <h1>User</h1>
-@stop
 
 @section('content')
 <div class="col-md-12">
@@ -17,7 +14,7 @@
                             <button class="btn btn-info btn-sm">
                                 <i class="fas fa-save"></i>
                             </button>
-                            <a href="{{ route('user.home')}}" class="btn btn-danger btn-sm">
+                            <a href="{{ route('user.index')}}" class="btn btn-danger btn-sm">
                                 <i class="fas fa-times-circle"></i>
                             </a>
                         </div>
@@ -28,13 +25,13 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="">Nama Lengkap</label>
-                                <input type="text" name="nama" id="nama" class="form-control">
+                                <input type="text" name="nama" id="nama" class="form-control" value="{{ $pegawai->nama }}">
                             </div>
                         </div>
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="">Email</label>
-                                <input type="text" name="email" id="email" class="form-control">
+                                <input type="text" name="email" id="email" class="form-control" value="{{ $pegawai->user['email'] }}">
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -47,8 +44,8 @@
                             <div class="form-group">
                                 <label for="">Role</label>
                                 <select name="role" id="role" class="form-control">
-                                    <option value="admin">Super Admin</option>
-                                    <option value="superadmin">Admin</option>
+                                    <option @if($pegawai->role_id == '2') ? {{ 'selected'}} : {{''}} @endif value="admin">Admin</option>
+                                    <option @if($pegawai->role_id == '1') ? {{ 'selected'}} : {{''}} @endif value="superadmin">Super Admin</option>
                                 </select>
                             </div>
                         </div>
@@ -58,9 +55,7 @@
         </div>
 </div>
 @stop
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
+
 
 @section('js')
     <script> console.log('Hi!'); </script>

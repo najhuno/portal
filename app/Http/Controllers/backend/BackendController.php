@@ -4,6 +4,9 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\ContentUtama;
+use Datatables;
 
 class BackendController extends Controller
 {
@@ -36,6 +39,8 @@ class BackendController extends Controller
     public function create()
     {
         //
+        
+       
     }
 
     /**
@@ -93,4 +98,60 @@ class BackendController extends Controller
     {
         //
     }
+
+    public function contentutama(){
+        
+        if(request()->ajax()) {
+            return datatables()->of(ContentUtama::select('*'))
+            ->addColumn('Aksi', 'backend.contentutama.edit')
+            ->rawColumns(['Aksi'])
+            ->addIndexColumn()
+            ->make(true);
+        }
+       return view('backend.contentutama.list');
+    }
+
+    public function storecontentutama(Request $request){
+        $companyId = $request->id;
+
+        $validatedData = $request->validate([
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+        ]);
+
+        $name = $request->file('image')->getClientOriginalName();
+       
+
+        $path = $request->file('image')->store('public/images');
+        
+        $company   =   ContentUtama::updateOrCreate(
+                    [
+                     'id' => $companyId
+                    ],
+                    [
+                    'judul' => $request->name, 
+                    'isi' => $request->email,
+                    'catatankecil' => $request->address,
+                    'button' => $request->address,
+                    'url' => $request->address,
+                    'namagambar' => $request->address,
+                    'path' => $request->address
+                    ]);    
+                         
+        return Response()->json($company);
+    }
+
+    public function editcontentutama(Request $request){
+        $where = array('id' => $request->id);
+        $content  = ContentUtama::where($where)->first();
+      
+        return Response()->json($content);
+    }
+
+    public function deletecontentutama(Request $request){
+        $company = ContentUtama::where('id',$request->id)->delete();
+      
+        return Response()->json($company);
+    }
+
+    
 }
