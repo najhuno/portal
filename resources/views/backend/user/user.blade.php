@@ -2,6 +2,11 @@
 
 @section('title', 'Dashboard')
 
+
+<link rel="stylesheet" href="{{ asset('assets/backend/css/bootstrap.min.css')}}" >
+<link  href="{{ asset('assets/backend/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+
+
 @section('content_header')
     <h1>User</h1>
 @stop

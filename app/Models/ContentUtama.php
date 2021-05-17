@@ -9,5 +9,5 @@ use Illuminate\Database\Eloquent\Model;
 class ContentUtama extends Model
 {
     use HasFactory;
-    protected $table = 'contents_utamas';
+    protected $table = 'contents_utama';
 }

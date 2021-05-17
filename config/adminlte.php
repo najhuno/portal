@@ -50,7 +50,7 @@ return [
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'OK',
 
     /*
     |--------------------------------------------------------------------------
@@ -234,11 +234,7 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
+        
         [
             'text' => 'Master',
             'url'  => '',
@@ -247,26 +243,37 @@ return [
                 [
                     'text' => 'Content Utama',
                     'url'  => 'backend/contentutama',
+                    'icon' => 'fas fa-fw fa-lock',
                 ],
                 [
                     'text' => 'Profil Perusahaan',
                     'url'  => 'backend/contentutama',
+                    'icon' => 'fas fa-fw fa-lock',
                 ],
                 [
                     'text' => 'Dashboard Nasabah',
                     'url'  => 'backend/dashboard',
+                    'icon' => 'fas fa-fw fa-lock',
                 ],
                 [
                     'text' => 'Prestasi & Penghargaan',
                     'url'  => 'backend/prestasi',
+                    'icon' => 'fas fa-fw fa-lock',
                 ],
                 [
                     'text' => 'Testimoni',
                     'url'  => 'backend/testimoni',
+                    'icon' => 'fas fa-fw fa-lock',
                 ],
                 [
                     'text' => 'Berita',
                     'url'  => 'backend/berita',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                [
+                    'text' => 'Suku Bunga',
+                    'url'  => 'backend/sukubunga',
+                    'icon' => 'fas fa-fw fa-lock',
                 ]
             ]
         ],
@@ -278,7 +285,13 @@ return [
                 [
                     'text' => 'User',
                     'url'  => 'backend/user',
-                ],                
+                    'icon' => 'fas fa-fw fa-user',
+                ],   
+                [
+                    'text' => 'change_password',
+                    'url'  => 'admin/settings',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],             
             ],
         ]
       

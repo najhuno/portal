@@ -4,6 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Dashboard;
 
 class HomeController extends Controller
 {
@@ -82,5 +83,46 @@ class HomeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function detailproduk($produk = null){
+
+        if($produk == "deposito"){
+            return view('frontend.produk.detailprodukdeposito');
+        } 
+        if($produk == "tabungan"){
+            return view('frontend.produk.detailproduktabungan');
+        }
+        if($produk == "kredit"){
+            return view('frontend.produk.detailprodukkredit');
+        }else{
+            return view('frontend.404');
+        }
+        
+    }
+
+    public function kredit($jenis = null){
+
+        if($jenis  == "kpr"){
+            return view('frontend.produk.kredit.kreditkpr');
+        } 
+        // if($jenis  == "tabungan"){
+        //     return view('frontend.produk.detailproduktabungan');
+        // }
+        // if($jenis  == "kredit"){
+        //     return view('frontend.produk.detailprodukkredit');
+        // }else{
+        //     return view('frontend.404');
+        // }
+        
+    }
+
+    public function getdashboard(Request $request){
+        // $where = array('id' => $request->id);
+        $content  = Dashboard::all();
+        
+      
+        return Response()->json($content);
     }
 }

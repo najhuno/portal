@@ -6,6 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\ContentUtama;
+use App\Models\Dashboard;
+use App\Models\Sukubunga;
+use Carbon\Carbon;
+
+
 use Datatables;
 
 class BackendController extends Controller
@@ -99,6 +104,8 @@ class BackendController extends Controller
         //
     }
 
+
+    // content slider 
     public function contentutama(){
         
         if(request()->ajax()) {
@@ -152,6 +159,101 @@ class BackendController extends Controller
       
         return Response()->json($company);
     }
+
+
+    // dashboard
+
+    public function dashboard(){
+        
+        if(request()->ajax()) {
+            return datatables()->of(Dashboard::select('*'))
+            ->addColumn('Aksi', 'backend.dashboard.edit')
+            ->rawColumns(['Aksi'])
+            ->addIndexColumn()
+            ->make(true);
+        }
+       return view('backend.dashboard.list',
+                    ['title' => 'Dashboard']
+                );
+    }
+
+    public function storedashboard(Request $request){
+        $companyId = $request->id;
+
+        
+        $company   =   ContentUtama::updateOrCreate(
+                    [
+                     'id' => $companyId
+                    ],
+                    [
+                    'judul' => $request->name, 
+                    'isi' => $request->email,
+                    'catatankecil' => $request->address,
+                    'button' => $request->address,
+                    'url' => $request->address,
+                    'namagambar' => $request->address,
+                    'path' => $request->address
+                    ]);    
+                         
+        return Response()->json($company);
+    }
+
+    public function editdashboard(Request $request){
+        $where = array('id' => $request->id);
+        $content  = ContentUtama::where($where)->first();
+      
+        return Response()->json($content);
+    }
+
+    // suku bunga
+
+    public function sukubunga(){
+        
+        if(request()->ajax()) {
+            return datatables()->of(Sukubunga::select('*'))
+            ->addColumn('Aksi', 'backend.sukubunga.edit')
+            ->rawColumns(['Aksi'])
+            ->addIndexColumn()
+            ->make(true);
+        }
+       return view('backend.sukubunga.list',
+                ['title' => 'Suku Bunga']
+            );
+    }
+
+    public function storesukubunga(Request $request){
+
+        $id         = $request->id;
+        $username   = User::first();
+        
+        $company    =   Sukubunga::updateOrCreate(
+                        [
+                        'id' => $id
+                        ],
+                        [
+                            'jenis_produk' => $request->jenis, 
+                            'nama_produk' => $request->produk,
+                            'suku_bunga' => $request->sukubunga,
+                            'update_by' => $username->name,
+                            'created_at' => Carbon::now(),    
+                            'updated_at' => Carbon::now()    
+                        ]
+                    );    
+                    
+                         
+        return Response()->json($company);
+    }
+
+    public function editsukubunga(Request $request){
+        $where = array('id' => $request->id);
+        $content  = ContentUtama::where($where)->first();
+      
+        return Response()->json($content);
+    }
+
+   
+
+
 
     
 }

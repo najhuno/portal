@@ -1,8 +1,8 @@
 @extends('adminlte::page')
 
 @section('title', 'Dashboard')
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
-<link  href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('assets/backend/css/bootstrap.min.css')}}" >
+<link  href="{{ asset('assets/backend/css/jquery.dataTables.min.css') }}" rel="stylesheet">
 
 @section('content_header')
     <h1>User</h1>
@@ -18,7 +18,7 @@
             <div class="card-tools">
                 <div class="btn-group">
                     <div class="pull-right mb-2">
-                        <a class="btn btn-success" onClick="add()" href="javascript:void(0)"> Create Company</a>
+                        <a class="btn btn-primary" onClick="add()" href="javascript:void(0)"> Create Company</a>
                     </div>
                     {{-- <a class="btn btn-info btn-sm" href="{{ route('user.create') }}">
                         <i class="fas fa-plus"></i>
@@ -105,9 +105,9 @@
     <!-- end bootstrap model -->
 @endsection
 @section('js')
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+<script src="{{ asset('assets/backend/js/jquery-3.5.1.min.js') }} "></script>
+<script src="{{ asset('assets/backend/js/bootstrap.min.js') }}  "></script>
+<script src="{{ asset('assets/backend/js/jquery.dataTables.min.js') }}"></script>
     <script> console.log('gooo!'); 
 
     $(document).ready(function(){
