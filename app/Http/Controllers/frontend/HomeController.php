@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Dashboard;
 use App\Models\Sukubunga;
+use App\Models\NasabahBaru;
+use Carbon\Carbon;
+use PDF;
+
 
 
 class HomeController extends Controller
@@ -141,7 +145,7 @@ class HomeController extends Controller
     }
 
     public function getdashboard(Request $request){
-        // $where = array('id' => $request->id);
+        
         $content  = Dashboard::all();
         
         return Response()->json($content);
@@ -156,7 +160,31 @@ class HomeController extends Controller
 
     // Profile Perusahaan
     public function profile(){
-        
+
         return view('frontend.profil');
     }
+
+    // Tambah Nasabah baru 
+    public function storeNasabah(Request $request){
+
+        $validatedData = $request->validate([
+            $request->all()
+        ]);
+
+        
+        $data   =   NasabahBaru::updateOrCreate(
+                    [
+                    'namalengkap' => $request->namanasabah, 
+                    'nik' => $request->nik,
+                    'nohp' => $request->hp,
+                    'email' => $request->email,
+                    'alamat' => $request->alamat,
+                    'pengajuan' => $request->jenisnasabah,
+                    'created_at' => Carbon::now()
+                    ]);    
+                         
+        return Response()->json($data);
+        
+    }
+
 }

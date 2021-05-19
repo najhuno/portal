@@ -26,6 +26,10 @@ Route::get('/detailproduk/{produk?}/{jenis?}', [HomeController::class, 'detailpr
 Route::get('/kredit/{jenis?}', [HomeController::class, 'kredit'])->name('kredit');
 Route::get('/getdashboard', [HomeController::class, 'getdashboard'])->name('getdashboard');
 Route::get('/getSukuBunga', [HomeController::class, 'getSukuBunga'])->name('getSukuBunga');
+Route::post('/storeNasabah', [HomeController::class, 'storeNasabah'])->name('storeNasabah');
+
+
+
 Route::get('/livewire/livewire.js', function () {
     echo 'Works';
 });
@@ -62,5 +66,9 @@ Route::middleware(['auth'])->group( function (){
         Route::post('/delete-sukubunga', [BackendController::class, 'deletesukubunga'])->name('backend.deletesukubunga');
         Route::post('/store-sukubunga', [BackendController::class, 'storesukubunga'])->name('backend.storesukubunga');
        
+        // download pdf nasabah baru
+        Route::get('/download/pdf', [BackendController::class, 'createPDF'])->name('download.pdf');
+        Route::get('/nasabahbaru', [BackendController::class, 'showNasabahBaru'])->name('backend.nasabahbaru');
+        
     });
 });

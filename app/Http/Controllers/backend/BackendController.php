@@ -8,7 +8,9 @@ use App\Models\User;
 use App\Models\ContentUtama;
 use App\Models\Dashboard;
 use App\Models\Sukubunga;
+use App\Models\NasabahBaru;
 use Carbon\Carbon;
+
 
 
 use Datatables;
@@ -251,6 +253,28 @@ class BackendController extends Controller
         return Response()->json($content);
     }
 
+
+    //  Nasabah Baru
+    public function createPDF() {
+        // retreive all records from db
+        $data = NasabahBaru::all();
+        
+
+        // share data to view
+        view()->share('employee',$data);
+        $pdf = PDF::loadView('viewNasabahBaru', $data);
+        
+        // download PDF file with download method
+        return $pdf->download('pdf_file.pdf');
+    }
+
+    public function showNasabahBaru()
+    {
+        //
+        $title = "Nasabah Baru";
+        $data = NasabahBaru::all();
+        return view('backend.nasabahbaru.list', compact('title','data'));
+    }
    
 
 

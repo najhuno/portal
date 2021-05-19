@@ -29,7 +29,16 @@
 <script>
         (function($) {
             'use strict';
+
+            $.ajaxSetup({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    }
+                });
+                
             $(document).ready(function() {
+
+                
                 var mobileDetect = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
                 if (mobileDetect) {
                     $('.cresta-whatsapp-chat-container').css('display','none');
@@ -181,6 +190,36 @@
                 
             });
 
+            var text ="";
+            $(".btn-pengajuan").click(function(){
+                
+                text = $(this).text();
+                $("#jenis_ajukan").html(text);
+                
+            })
+
+
+            $('#addNasabahForm').submit(function(e) {
+                e.preventDefault();
+                var formData = new FormData(this);  
+                formData.append("jenisnasabah",text);
+                $.ajax({
+                    type:'POST',
+                    url: "{{ url('storeNasabah')}}",
+                    data: formData,
+                    cache:false,
+                    contentType: false,
+                    processData: false,
+                    success: (data) => {
+                        console.log("hasil");
+                        console.log(data);
+                        $("#addNasabah").modal('hide');
+                    },
+                    error: function(data){
+                        console.log(data);
+                    }
+                });
+            });
 
         })(jQuery);
 </script>

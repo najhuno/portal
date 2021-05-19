@@ -1,4 +1,60 @@
-		<footer class="footer" style="background-image:url({{ asset('assets/frontend/img/map.png') }}">
+	<!-- Tambah Data Nasabah -->
+	<!-- Modal -->
+	<div class="modal fade" id="addNasabah" role="dialog" style="top: 10%">
+		<div class="modal-dialog">
+		
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Mohon infokan data diri Anda</h4>
+			</div>
+			<form action="javascript:void(0)" id="addNasabahForm" name="addNasabahForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
+
+			<div class="modal-body">
+					<input type="hidden" name="id" id="id">
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" class="form-control" id="namanasabah" name="namanasabah" placeholder="Nama Lengkap" required="">
+						</div>
+					</div>  
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" class="form-control" id="nik" name="nik" placeholder="Nomor NIK KTP"  required="">
+						</div>
+					</div>  
+					<div class="form-group">
+					<div class="col-sm-12">
+							<input type="text" class="form-control" id="hp" name="hp" placeholder="Nomor Handphone"  required="">
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" class="form-control" id="email" name="email" placeholder="Email" maxlength="50">
+						</div>
+					</div>
+					<div class="form-group">
+					<div class="col-sm-12">
+							<input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"  required="">
+						</div>
+					</div>
+				
+			</div><br>
+			<div class="modal-footer">
+				<div class="g-recaptcha" data-sitekey="6LerHtoaAAAAAAXaq_dJTwpndhz1JD6Vfw1HszqZ"></div>
+				<i class="fa fa-info-circle"></i>
+				<div class="col-md-10">
+				
+					<span style="font-size: 12px;"> Dengan klik 'Submit' maka Personal Banking Officer kami dapat segera  membantu Anda untuk mengajukan <h5 id="jenis_ajukan"></h5> 
+					</span>
+				</div>
+				<button type="submit" class="btn btn-primary btn-submitNasabah" id="btn-save">Submit</button>       
+			</div>
+		</form>
+		</div>
+		</div>
+	</div>
+	<footer class="footer" style="background-image:url({{ asset('assets/frontend/img/map.png') }}">
 			<!-- Footer Top -->
 			<div class="footer-top">
 				<div class="container">

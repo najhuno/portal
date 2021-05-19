@@ -234,7 +234,14 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        
+
+        [
+            'text' => 'Nasabah Baru',
+            'url'  => '',
+            'icon' => 'fa fa-user',
+            
+        ],
+               
         [
             'text' => 'Master',
             'url'  => '',
@@ -242,6 +249,11 @@ return [
             'submenu' => [
                 [
                     'text' => 'Content Utama',
+                    'url'  => 'backend/contentutama',
+                    'icon' => 'fas fa-fw fa-lock',
+                ],
+                [
+                    'text' => '',
                     'url'  => 'backend/contentutama',
                     'icon' => 'fas fa-fw fa-lock',
                 ],

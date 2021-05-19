@@ -40,6 +40,7 @@
                     <div class="form-group button">
                         <button type="submit" class="bizwheel-btn theme-1" data-toggle="modal" data-target="#addNasabah">Ajukan Kredit</button>
                     </div>
+
 				</div>
 			</div>
         </div>
@@ -169,53 +170,6 @@
 
 <!-- Modal -->
 
-<!-- Modal -->
-<div class="modal fade" id="addNasabah" role="dialog" style="top: 10%">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Mohon infokan data diri Anda</h4>
-        </div>
-        <div class="modal-body">
-            <form action="javascript:void(0)" id="CompanyForm" name="CompanyForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
-                <input type="hidden" name="id" id="id">
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" id="judul" name="judul" placeholder="Nama Lengkap" maxlength="50" required="">
-                    </div>
-                </div>  
-                <div class="form-group">
-                <div class="col-sm-12">
-                        <input type="text" class="form-control" id="isi" name="isi" placeholder="Nomor Handphone" maxlength="50" required="">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <input type="text" class="form-control" id="isi" name="isi" placeholder="Email" maxlength="50" required="">
-                    </div>
-                </div>
-                <div class="form-group">
-                <div class="col-sm-12">
-                        <input type="text" class="form-control" id="isi" name="isi" placeholder="Alamat" maxlength="50" required="">
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <div class="g-recaptcha" data-sitekey="6LerHtoaAAAAAAXaq_dJTwpndhz1JD6Vfw1HszqZ"></div>
-            <div class="col-md-10">
-                <span style="font-size: 12px;"> Dengan klik 'Ajukan Kredit' maka Personal Banking Officer kami dapat segera membantu Anda untuk mengajukan kredit 
-                </span>
-            </div>
-            <button type="submit" class="btn btn-primary" id="btn-save">Ajukan Kredit</button>       
-        </div>
-      </div>
-      
-    </div>
-</div>
  
 </section>
 

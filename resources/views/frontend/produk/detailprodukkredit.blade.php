@@ -17,7 +17,7 @@
 						</ul>
 					</div>
 					<!-- Bread Title -->
-					<div class="bread-title"><h2>Kredit</h2></div>
+					<div class="bread-title"><h2>Pinjaman (Kredit)</h2></div>
 				</div>
 			</div>
 		</div>
@@ -38,6 +38,12 @@
 					<div class="section-bottom"> Kami menyediakan beragam jenis produk Kredit untuk mewujudkan impian Anda, keluarga Anda, dan juga untuk para pebisnis dan pengusaha. Proses yang cepat dan persyaratan yang mudah menunjukkan komitmen BPR Lestari untuk mendukung segala jenis kebutuhan dan usaha Anda.</p>
 					
 					</div>
+
+					<br><br>
+					<div class="form-group button">
+						<button type="submit" class="bizwheel-btn theme-1 btn-pengajuan" data-toggle="modal" data-target="#addNasabah">Ajukan Kredit</button>
+					</div>
+
 				</div>
 			</div>
         </div>
