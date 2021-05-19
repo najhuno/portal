@@ -1,4 +1,4 @@
-		<footer class="footer" style="background-image:url('img/map.png')">
+		<footer class="footer" style="background-image:url({{ asset('assets/frontend/img/map.png') }}">
 			<!-- Footer Top -->
 			<div class="footer-top">
 				<div class="container">

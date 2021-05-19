@@ -5,6 +5,8 @@ namespace App\Http\Controllers\frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Dashboard;
+use App\Models\Sukubunga;
+
 
 class HomeController extends Controller
 {
@@ -86,7 +88,7 @@ class HomeController extends Controller
     }
 
 
-    public function detailproduk($produk = null){
+    public function detailproduk($produk = null, $jenis = null){
 
         if($produk == "deposito"){
             return view('frontend.produk.detailprodukdeposito');
@@ -95,7 +97,27 @@ class HomeController extends Controller
             return view('frontend.produk.detailproduktabungan');
         }
         if($produk == "kredit"){
-            return view('frontend.produk.detailprodukkredit');
+            if($jenis == "potpns"){
+                return view('frontend.produk.kredit.potpns');
+            }
+            if($jenis == "sertifikasi"){
+                return view('frontend.produk.detailprodukkredit');
+            }
+            if($jenis == "siltap"){
+                return view('frontend.produk.detailprodukkredit');
+            }
+            if($jenis == "tpp"){
+                return view('frontend.produk.detailprodukkredit');
+            }
+            if($jenis == "umum"){
+                return view('frontend.produk.detailprodukkredit');
+            }
+            if($jenis == "kepincut"){
+                return view('frontend.produk.detailprodukkredit');
+            }else{
+                return view('frontend.produk.detailprodukkredit');
+            }
+            
         }else{
             return view('frontend.404');
         }
@@ -104,8 +126,8 @@ class HomeController extends Controller
 
     public function kredit($jenis = null){
 
-        if($jenis  == "kpr"){
-            return view('frontend.produk.kredit.kreditkpr');
+        if($jenis  == "potpns"){
+            return view('frontend.produk.kredit.potpns');
         } 
         // if($jenis  == "tabungan"){
         //     return view('frontend.produk.detailproduktabungan');
@@ -122,7 +144,19 @@ class HomeController extends Controller
         // $where = array('id' => $request->id);
         $content  = Dashboard::all();
         
-      
         return Response()->json($content);
+    }
+
+    public function getSukuBunga(Request $request){
+        
+        $content  = Sukubunga::all();
+        
+        return Response()->json($content);
+    }
+
+    // Profile Perusahaan
+    public function profile(){
+        
+        return view('frontend.profil');
     }
 }

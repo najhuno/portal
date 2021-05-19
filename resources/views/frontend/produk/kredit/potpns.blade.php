@@ -24,7 +24,7 @@
     </div>
 </div>
 <!-- Skill Area -->
-<section class="skill-area section-space" style="background-image:url({{ asset('assets/frontend/img/nabung.png') }}">
+<section class="skill-area section-space" style="background-image:url({{ asset('assets/frontend/img/kredit_siltap.png') }}">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-8 col-12">
@@ -35,8 +35,11 @@
 					
 					<div class="section-bottom"> Kami menyediakan beragam jenis produk Kredit untuk mewujudkan impian Anda, keluarga Anda, dan juga untuk para pebisnis dan pengusaha. Proses yang cepat dan persyaratan yang mudah menunjukkan komitmen BPR Lestari untuk mendukung segala jenis kebutuhan dan usaha Anda.</p>
                         
-                    </div><br>
-                    <button class="btn btn-primary btn-lg btn-open-tabungan">Ajukan Kredit</button>
+                    </div>
+                    <br><br>
+                    <div class="form-group button">
+                        <button type="submit" class="bizwheel-btn theme-1" data-toggle="modal" data-target="#addNasabah">Ajukan Kredit</button>
+                    </div>
 				</div>
 			</div>
         </div>
@@ -53,7 +56,7 @@
             <div class="col-lg-8 col-12">
                 <!-- Service Image -->
                 <div class="service-img">
-                    <img src="{{ asset('assets/frontend/img/bg2.jpg') }}" alt="#">
+                    <img style="width: 90%" src="{{ asset('assets/frontend/img/produk_kredit.png') }}" alt="#">
                 </div>
                 <!-- Service Content -->
                 <div class="service-content">
@@ -93,7 +96,9 @@
                     <p>Female is firmament made land don’t good behold yielding morning hathe seas unto. So first fill shall damn creeping. Seed he was that moveth bearing. Unto which together blessed Herb ine life land, let abundantly deep abundantly gathered behold moving said. Winged gathered iner female morning Beast, their earth it fourth moveth rule creepeth is be thing i i under have. Second to lights all second.</p>
                 </div>
                 <br>
-                <button class="btn btn-primary btn-lg btn-open-tabungan">Ajukan Kredit</button>
+                <div class="form-group button">
+                    <button type="submit" class="bizwheel-btn theme-1" data-toggle="modal" data-target="#addNasabah">Ajukan Kredit</button>
+                </div>
                 
             </div>
             <div class="col-lg-4 col-12">
@@ -110,9 +115,8 @@
                                     <div class="col-12">
                                         <div class="form-group">
                                             <label>Produk Kredit</label><br>
-                                            <select class="form-control" name="user-name" >
-                                                <option value="">Potong</option>
-                                                <option>Koperasi</option>
+                                            <select class="form-control" name="produk_kredit" id="produk_kredit">
+                                                <option value="">No Choose</option>
                                             </select>
                                         </div>
                                     </div>
@@ -161,7 +165,61 @@
             </div>
         </div>
     </div>
+
+
+<!-- Modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="addNasabah" role="dialog" style="top: 10%">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Mohon infokan data diri Anda</h4>
+        </div>
+        <div class="modal-body">
+            <form action="javascript:void(0)" id="CompanyForm" name="CompanyForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id" id="id">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="judul" name="judul" placeholder="Nama Lengkap" maxlength="50" required="">
+                    </div>
+                </div>  
+                <div class="form-group">
+                <div class="col-sm-12">
+                        <input type="text" class="form-control" id="isi" name="isi" placeholder="Nomor Handphone" maxlength="50" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <input type="text" class="form-control" id="isi" name="isi" placeholder="Email" maxlength="50" required="">
+                    </div>
+                </div>
+                <div class="form-group">
+                <div class="col-sm-12">
+                        <input type="text" class="form-control" id="isi" name="isi" placeholder="Alamat" maxlength="50" required="">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <div class="g-recaptcha" data-sitekey="6LerHtoaAAAAAAXaq_dJTwpndhz1JD6Vfw1HszqZ"></div>
+            <div class="col-md-10">
+                <span style="font-size: 12px;"> Dengan klik 'Ajukan Kredit' maka Personal Banking Officer kami dapat segera membantu Anda untuk mengajukan kredit 
+                </span>
+            </div>
+            <button type="submit" class="btn btn-primary" id="btn-save">Ajukan Kredit</button>       
+        </div>
+      </div>
+      
+    </div>
+</div>
+ 
 </section>
+
+
 
 <!-- Chat -->
 @include('frontend.layout.chat')

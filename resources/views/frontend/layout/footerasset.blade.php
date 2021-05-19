@@ -72,7 +72,7 @@
                             url: "{{ route('getdashboard') }}",
                             dataType: 'json',
                             success: function(data){
-                                console.log(data);
+                                
                                 $("#NasabahTabungan").html(data[0].nama)
                                 $("#NasabahTabunganvalue").html(data[0].jumlah)
                                 
@@ -88,6 +88,97 @@
                             }
                         });
                 }
+
+                getSukubunga();
+
+                function getSukubunga(){
+                    
+                        jQuery.ajax({
+                            type: 'GET',
+                            url: "{{ route('getSukuBunga') }}",
+                            dataType: 'json',
+                            success: function(data){
+                                console.log(data);
+
+                                $("#potpns").html(data[0].jenis_produk)
+                                $("#potpnsvalue").html(data[0].suku_bunga+" %")
+                                
+                                $("#sertifikasi").html(data[1].jenis_produk)
+                                $("#sertifikasivalue").html(data[1].suku_bunga+" %")
+                                
+                                $("#siltap").html(data[2].jenis_produk)
+                                $("#siltapvalue").html(data[2].suku_bunga+" %")
+                                
+                                $("#tpp").html(data[3].jenis_produk)
+                                $("#tppvalue").html(data[3].suku_bunga+" %")
+                                
+                                $("#umum").html(data[4].jenis_produk)
+                                $("#umumvalue").html(data[4].suku_bunga+" %")
+                                
+                                $("#kepincut").html(data[5].jenis_produk)
+                                $("#kepincutvalue").html(data[5].suku_bunga+" %")
+                             
+                            
+                            }
+                        });
+                }
+
+
+
+                //video play company profile 
+
+                // Gets the video src from the data-src on each button
+                var $videoSrc;  
+                $('.video-btn').click(function() {
+                    $videoSrc = $(this).data( "src" );
+                });
+                console.log($videoSrc);
+                
+                // when the modal is opened autoplay it  
+                $('#myModal').on('shown.bs.modal', function (e) {
+                    
+                // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+                $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+                })
+                
+                // stop playing the youtube video when I close the modal
+                $('#myModal').on('hide.bs.modal', function (e) {
+                    // a poor man's stop video
+                    $("#video").attr('src',$videoSrc); 
+                })
+
+                $.getJSON("{{ route('getSukuBunga') }}", function(return_data){
+                    $.each(return_data.data, function(key,value){
+                        $("#produk_kredit").append(
+
+                        "<option value=" + value.id +">"+value.name+"</option>"
+
+                        );
+                    });
+                });
+                // $('#produk_kredit').change(function(){ 
+                //     alert("ok")
+                    // var id=$(this).val();
+                    // $.ajax({
+                    //     url : "{{ route('getSukuBunga') }}",
+                    //     method : "GET",
+                    //     async : true,
+                    //     dataType : 'json',
+                    //     success: function(data){
+                    //         console.log("hasil")
+                    //         console.log(data)
+                    //         var html = '';
+                    //         var i;
+                    //         for(i=0; i<data.length; i++){
+                    //             html += '<option value='+data[i].suku_bunga+'>'+data[i].jenis_produk+'</option>';
+                    //         }
+                    //         $('#produk').html(html);
+    
+                    //     }
+                    // });
+                    // return false;
+                // }); 
+                
             });
 
 
@@ -217,5 +308,109 @@ for(i = 0; i < list.length; i++ ){
             }
 
     
+
+
+    $(function() {
+    "use strict";
+    var body = $("body"),
+        active = $(".slider ol li, .slider .controll"),
+        controll = $(".slider .controll"),
+        playpause = $(".playpause"),
+        sliderTime = 1,
+        sliderWait = 3000,
+        i = 999,
+        autoRun,
+        stop = false;
+    // Reset
+    $(".slider ul li:first").css("left", 0);
+    // Run Slider
+    function runSlider(what) {
+        what.addClass("active").siblings("li, span").removeClass("active");
+    }
+    // slider gsap
+    function gsapSlider(whose, left) {
+        i++;
+        if (whose.hasClass("active")) {
+            TweenMax.fromTo(
+                ".slider ul li.active",
+                sliderTime,
+                { zIndex: i, left: left },
+                { left: 0 }
+            );
+        }
+    }
+    // Active
+    active.on("click", function() {
+        runSlider($(this));
+    });
+    // Arrow left
+    controll.first().on("click", function() {
+        var slide = $(".slider ul li.active, .slider ol li.active").is(
+            ":first-of-type"
+        )
+            ? $(".slider ul li:last, .slider ol li:last")
+            : $(".slider ul li.active, .slider ol li.active").prev("li");
+        runSlider(slide);
+        gsapSlider(slide, "100%");
+    });
+    // Arrow right
+    controll.last().on("click", function() {
+        var slide = $(".slider ul li.active, .slider ol li.active").is(
+            ":last-of-type"
+        )
+            ? $(".slider ul li:first, .slider ol li:first")
+            : $(".slider ul li.active, .slider ol li.active").next("li");
+        runSlider(slide);
+        gsapSlider(slide, "-100%");
+    });
+    // Point
+    $(".slider ol li").on("click", function() {
+        var start = $(".slider ul li.active").index();
+        var slide = $(".slider ul li").eq($(this).index());
+        runSlider(slide);
+        var end = $(".slider ul li.active").index();
+        if (start > end) {
+            gsapSlider(slide, "100%");
+        }
+        if (start < end) {
+            gsapSlider(slide, "-100%");
+        }
+    });
+    // Auto run slider
+    function autoRunSlider() {
+        if (body.css("direction") === "ltr" && stop === false) {
+            autoRun = setInterval(function() {
+                controll.last().click();
+            }, sliderWait);
+        } else if (body.css("direction") === "rtl" && stop === false) {
+            autoRun = setInterval(function() {
+                controll.first().click();
+            }, sliderWait);
+        }
+    }
+    autoRunSlider();
+    // When hover
+    active.on("mouseenter", function() {
+        if (stop === false) {clearInterval(autoRun);}
+    });
+    active.on("mouseleave", function() {
+        if (stop === false) {autoRunSlider();}
+    });
+    // play pause click
+    playpause.on("click", function() {
+        $(this).toggleClass("fa-play-circle-o fa-pause-circle-o");
+        if (playpause.hasClass("fa-play-circle-o")) {
+            stop = true;
+            clearInterval(autoRun);
+            $(this).attr('title', 'play');
+        }
+        if (playpause.hasClass("fa-pause-circle-o")) {
+            stop = false;
+            autoRunSlider();
+            $(this).attr('title', 'pause');
+        }
+    });
+});
+
 
 </script>

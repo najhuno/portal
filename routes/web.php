@@ -22,9 +22,10 @@ use App\Http\Livewire\NotificationSweetAlert;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/detailproduk/{produk?}', [HomeController::class, 'detailproduk'])->name('detailproduk');
+Route::get('/detailproduk/{produk?}/{jenis?}', [HomeController::class, 'detailproduk'])->name('detailproduk');
 Route::get('/kredit/{jenis?}', [HomeController::class, 'kredit'])->name('kredit');
 Route::get('/getdashboard', [HomeController::class, 'getdashboard'])->name('getdashboard');
+Route::get('/getSukuBunga', [HomeController::class, 'getSukuBunga'])->name('getSukuBunga');
 Route::get('/livewire/livewire.js', function () {
     echo 'Works';
 });

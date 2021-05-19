@@ -207,19 +207,40 @@
 			color: #fff;
 		}
 
+		/* video play company profile */
+		.modal-dialog {
+			max-width: 800px;
+			margin: 30px auto;
+		}
+
+		.modal-body {
+			position:relative;
+			padding:0px;
+		}
+		.close {
+			position:absolute;
+			right:-30px;
+			top:0;
+			z-index:999;
+			font-size:2rem;
+			font-weight: normal;
+			color:#fff;
+			opacity:1;
+		}
+
 		
 		</style>
 	</head>
-	<body id="bg" style="font-family: 'Poppins', sans-serif;">
+<body id="bg" style="font-family: 'Poppins', sans-serif;">
+
+	<!-- Boxed Layout -->
+	<div id="page" class="site boxed-layout"> 
 	
-		<!-- Boxed Layout -->
-		<div id="page" class="site boxed-layout"> 
-		
-		<!-- Preloader -->
-		<div class="preeloader">
-			<div class="preloader-spinner"></div>
-		</div>
-		<!--/ End Preloader -->
-	
-		<!-- Header -->
-		<header class="header">
+	<!-- Preloader -->
+	<div class="preeloader">
+		<div class="preloader-spinner"></div>
+	</div>
+	<!--/ End Preloader -->
+
+	<!-- Header -->
+	<header class="header">
