@@ -17,7 +17,7 @@
                         </ul>
                     </div>
                     <!-- Bread Title -->
-                    <div class="bread-title"><h2>Kredit Gaji PNS/HONOR</h2></div>
+                    <div class="bread-title"><h2>Kredit Potongan Gaji PNS/HONOR</h2></div>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
                     </div>
                     <br><br>
                     <div class="form-group button">
-                        <button type="submit" class="bizwheel-btn theme-1" data-toggle="modal" data-target="#addNasabah">Ajukan Kredit</button>
+                        <button type="submit" class="bizwheel-btn theme-1 btn-pengajuan" data-toggle="modal" data-target="#addNasabah">Ajukan Kredit</button>
                     </div>
 
 				</div>
@@ -57,7 +57,7 @@
             <div class="col-lg-8 col-12">
                 <!-- Service Image -->
                 <div class="service-img">
-                    <img style="width: 90%" src="{{ asset('assets/frontend/img/produk_kredit.png') }}" alt="#">
+                    <img style="width: 90%" src="{{ asset('assets/frontend/img/produk/produk_kredit.png') }}" alt="#">
                 </div>
                 <!-- Service Content -->
                 <div class="service-content">

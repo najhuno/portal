@@ -39,7 +39,7 @@
 					</div>
 					<br><br>
 					<div class="form-group button">
-                        <button type="submit" class="bizwheel-btn theme-1 btn-pengajuan" data-toggle="modal" data-target="#addNasabah">Buka Tabungan</button>
+                        <button type="submit" class="bizwheel-btn theme-2 btn-pengajuan" data-toggle="modal" data-target="#addNasabah">Buka Tabungan</button>
                     </div>
 				</div>
 			</div>
@@ -62,9 +62,9 @@
 				<div class="single-news ">
 					
 					<div class="news-head overlay">
-						<img src="{{asset('assets/frontend/img/produk_deposito.png') }}" alt="#">
+						<img src="{{asset('assets/frontend/img/produk/produk_deposito.png') }}" alt="#">
 						<ul class="news-meta">
-							<li class="author"><a href="#"><i class="fa fa-user"></i>Tabungan Masyarakat Daerah</a></li>
+							<li class="author" style="font-size:22px"><a href="#"><i class="fa fa-user"></i>Tabungan Masyarakat Daerah</a></li>
 							{{-- <li class="date"><i class="fa fa-calendar"></i>April 15, 2020</li>
 							<li class="view"><i class="fa fa-comments"></i>0</li> --}}
 						</ul>
@@ -83,9 +83,9 @@
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{asset('assets/frontend/img/produk_deposito.png') }}" alt="#">
+						<img src="{{asset('assets/frontend/img/produk/produk_deposito.png') }}" alt="#">
 						<ul class="news-meta">
-							<li class="author"><a href="#"><i class="fa fa-user"></i>Tabungan Siswa</a></li>
+							<li class="author" style="font-size:22px"><a href="#"><i class="fa fa-user"></i>Tabungan Siswa</a></li>
 							{{-- <li class="date"><i class="fa fa-calendar"></i>April 15, 2020</li>
 							<li class="view"><i class="fa fa-comments"></i>0</li> --}}
 						</ul>
@@ -104,9 +104,9 @@
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{asset('assets/frontend/img/produk_deposito.png') }}" alt="#">
+						<img src="{{asset('assets/frontend/img/produk/produk_deposito.png') }}" alt="#">
 						<ul class="news-meta">
-							<li class="author"><a href="#"><i class="fa fa-user"></i>Tabungan Anak Sekolah</a></li>
+							<li class="author" style="font-size:22px"><a href="#"><i class="fa fa-user"></i>Tabungan Anak Sekolah</a></li>
 							{{-- <li class="date"><i class="fa fa-calendar"></i>April 15, 2020</li>
 							<li class="view"><i class="fa fa-comments"></i>0</li> --}}
 						</ul>

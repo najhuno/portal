@@ -41,7 +41,7 @@
 
 					<br><br>
 					<div class="form-group button">
-						<button type="submit" class="bizwheel-btn theme-1 btn-pengajuan" data-toggle="modal" data-target="#addNasabah">Ajukan Kredit</button>
+						<button type="submit" class="bizwheel-btn theme-2 btn-pengajuan" data-toggle="modal" data-target="#addNasabah">Ajukan Kredit</button>
 					</div>
 
 				</div>
@@ -63,7 +63,7 @@
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{asset('assets/frontend/img/produk_deposito.png') }}" alt="#">
+						<img src="{{asset('assets/frontend/img/produk/produk_deposito.png') }}" alt="#">
 						<ul class="news-meta">
 							<li class="author"><a href="#"><i class="fa fa-user"></i>site</a></li>
 							<li class="date"><i class="fa fa-calendar"></i>April 15, 2020</li>
@@ -73,7 +73,7 @@
 					<div class="news-body">
 						<div class="news-content">
 							<h3 class="news-title"><a href="{{ url('detailproduk/kredit/potpns') }}">Kredit Potongan Gaji PNS/HONOR</a></h3>
-							<div class="news-text"><p>Sed tempus pulvinar augue ut euismod. Donec a nisi volutpat, dignissim mauris eget. Quisque vitae nunc sit amet eros pellentesque tempus at sit amet sem. Maecenas</p></div>
+							<div class="news-text"><p>Sed tempus pulvinar augue ut euismod. Donec a nisi volutpat Quisque vitae nunc sit amet eros pellentesque tempus at sit amet sem. Maecenas</p></div>
 							<a href="{{ url('detailproduk/kredit/potpns') }}" class="more">Continue reading <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
@@ -84,7 +84,7 @@
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{asset('assets/frontend/img/produk_deposito.png') }}" alt="#">
+						<img src="{{asset('assets/frontend/img/produk/produk_deposito.png') }}" alt="#">
 						<ul class="news-meta">
 							<li class="author"><a href="#"><i class="fa fa-user"></i>site</a></li>
 							<li class="date"><i class="fa fa-calendar"></i>April 15, 2020</li>
@@ -105,7 +105,7 @@
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{asset('assets/frontend/img/produk_deposito.png') }}" alt="#">
+						<img src="{{asset('assets/frontend/img/produk/produk_deposito.png') }}" alt="#">
 						<ul class="news-meta">
 							<li class="author"><a href="#"><i class="fa fa-user"></i>site</a></li>
 							<li class="date"><i class="fa fa-calendar"></i>April 15, 2020</li>
@@ -126,7 +126,7 @@
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{asset('assets/frontend/img/produk_deposito.png') }}" alt="#">
+						<img src="{{asset('assets/frontend/img/produk/produk_deposito.png') }}" alt="#">
 						<ul class="news-meta">
 							<li class="author"><a href="#"><i class="fa fa-user"></i>site</a></li>
 							<li class="date"><i class="fa fa-calendar"></i>April 15, 2020</li>
@@ -147,7 +147,7 @@
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{asset('assets/frontend/img/produk_deposito.png') }}" alt="#">
+						<img src="{{asset('assets/frontend/img/produk/produk_deposito.png') }}" alt="#">
 						<ul class="news-meta">
 							<li class="author"><a href="#"><i class="fa fa-user"></i>site</a></li>
 							<li class="date"><i class="fa fa-calendar"></i>April 15, 2020</li>
@@ -168,7 +168,7 @@
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{asset('assets/frontend/img/produk_deposito.png') }}" alt="#">
+						<img src="{{asset('assets/frontend/img/produk/produk_deposito.png') }}" alt="#">
 						<ul class="news-meta">
 							<li class="author"><a href="#"><i class="fa fa-user"></i>site</a></li>
 							<li class="date"><i class="fa fa-calendar"></i>April 15, 2020</li>
@@ -193,7 +193,7 @@
 
 
 <!-- Skill Area -->
-<section class="skill-area section-space" style="background: #F0F0F0">
+<section class="skill-area section-space" style="background-image: url({{ asset('assets/frontend/img/profil.png') }});">
 	<div class="container">
 		<div class="row">
 			<div class="service-content">

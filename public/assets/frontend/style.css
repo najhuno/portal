@@ -859,7 +859,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     display: inline-block;
     font-size: 14px;
     border-radius: 30px;
-    background: #163964;
+    background: #25dbdf;
     padding: 10px 20px;
     border-radius: 0px;
 	border:1px solid transparent;
@@ -2062,6 +2062,7 @@ p.has-large-font-size {
 .hero-slider,
 .hero-slider .single-slider{
 	height:607px;
+   
 }
 .hero-slider .single-slider {
 	background-size: cover;

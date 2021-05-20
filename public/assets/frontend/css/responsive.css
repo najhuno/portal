@@ -605,9 +605,9 @@ p{
 .hero-slider, .hero-slider .single-slider {
 	height: 450px !important;
 }
-.hero-slider .single-slider {
+/* .hero-slider .single-slider {
 	background: #fff !important;
-}
+} */
 .hero-slider .hero-text .p-text {
 	max-width: 100%;
 }

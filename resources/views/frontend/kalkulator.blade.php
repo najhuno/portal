@@ -1,9 +1,7 @@
 {{-- <div class="row" style="background: #012756;"> --}}
 	<section class="Testimonials section-space">
 		<div class="container">
-			{{-- <div class="row"> --}}
-		{{-- <div class="col-md-12"> --}}
-			<!-- Contact Form -->
+			
 			<div class="contact-form-area m-top-30">
 				<div class="bd-example bd-example-tabs">
 					<ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -120,9 +118,7 @@
 					</div>
 				</div>
 			</div>
-			<!--/ End contact Form -->
-		{{-- </div> --}}
-			{{-- </div> --}}
+		
 		</div>
 	</section>
 {{-- </div> --}}

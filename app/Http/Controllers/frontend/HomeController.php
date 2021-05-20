@@ -180,6 +180,7 @@ class HomeController extends Controller
                     'email' => $request->email,
                     'alamat' => $request->alamat,
                     'pengajuan' => $request->jenisnasabah,
+                    'cabang' => $request->cabang,
                     'created_at' => Carbon::now()
                     ]);    
                          

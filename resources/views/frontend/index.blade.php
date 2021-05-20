@@ -4,6 +4,7 @@
 @include('frontend.layout.top_header')
 	
 <!-- Hero Slider -->
+<!-- Slideshow container -->
 <section class="hero-slider style1">
 	<div class="home-slider">
 		<!-- Single Slider -->
@@ -57,12 +58,9 @@
 			</div>
 		</div>
 		<!--/ End Single Slider -->		
-	</div>
-
-	
+	</div>	
 </section>
 <!--/ End Hero Slider -->
-
 <!-- Produk -->
 <section class="blog-layout news-default section-space"id="produkkredit">
 	<div class="container">
@@ -81,11 +79,11 @@
 			</div>
 		</div>
 		<div class="row ">
-			<div class="col-lg-4 col-md-6 col-12">
+			<div class="col-lg-3 col-md-6 col-12">
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{ asset('assets/frontend/img/produk_kredit.png') }}" alt="#">
+						<img src="{{ asset('assets/frontend/img/produk/produk_kredit.png') }}" alt="#">
 					</div>
 					<div class="news-body">
 						<div class="news-content">
@@ -97,32 +95,48 @@
 				</div>
 				<!--/ End Single Blog -->
 			</div>
-			<div class="col-lg-4 col-md-6 col-12">
+			<div class="col-lg-3 col-md-6 col-12">
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{ asset('assets/frontend/img/produk_tabungan.png') }}" alt="#">
+						<img src="{{ asset('assets/frontend/img/produk/produk_tabungan.png') }}" alt="#">
 					</div>
 					<div class="news-body">
 						<div class="news-content">
-							<h3 class="news-title"><a href="blog-single.html">Tabungan</a></h3>
+							<h3 class="news-title"><a href="{{ url('detailproduk/tabungan') }}">Tabungan</a></h3>
 							<div class="news-text"><p>Simpnanan yang menguntungkan dengan setoran terjangkau yang memberikan kemudahan dalam bertransaksi.</p><br></div>
-							<a href="{{ url('detailproduk/kredit') }}" class="more">Lihat Selengkapnya <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+							<a href="{{ url('detailproduk/tabungan') }}" class="more">Lihat Selengkapnya <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
 				</div>
 				<!--/ End Single Blog -->
 			</div>
-			<div class="col-lg-4 col-md-6 col-12">
+			<div class="col-lg-3 col-md-6 col-12">
 				<!-- Single Blog -->
 				<div class="single-news ">
 					<div class="news-head overlay">
-						<img src="{{ asset('assets/frontend/img/produk_deposito.png') }}" alt="#">
+						<img src="{{ asset('assets/frontend/img/produk/produk_deposito.png') }}" alt="#">
 					</div>
 					<div class="news-body">
 						<div class="news-content">
 							<h3 class="news-title"><a href="blog-single.html">Deposito</a></h3>
-							<div class="news-text"><p>Produk simpanan berjangka yang ideal dengan bunga kompetitif agar berinvestasi ditempat yang aman dan terpercaya, sekaligus menguntungkan</p><br></div>
+							<div class="news-text"><p>Produk simpanan berjangka yang ideal dengan bunga kompetitif agar berinvestasi ditempat yang aman dan terpercaya, sekaligus menguntungkan</p></div>
+							<a href="blog-single.html" class="more">Lihat Selengkapnya <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+				<!--/ End Single Blog -->
+			</div>
+			<div class="col-lg-3 col-md-6 col-12">
+				<!-- Single Blog -->
+				<div class="single-news ">
+					<div class="news-head overlay">
+						<img src="{{ asset('assets/frontend/img/produk/layanan.jpg') }}" alt="#">
+					</div>
+					<div class="news-body">
+						<div class="news-content">
+							<h3 class="news-title"><a href="blog-single.html">E-Channel</a></h3>
+							<div class="news-text"><p>Produk simpanan berjangka yang ideal dengan bunga kompetitif agar berinvestasi ditempat yang aman dan terpercaya, sekaligus menguntungkan</p></div>
 							<a href="blog-single.html" class="more">Lihat Selengkapnya <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 						</div>
 					</div>
@@ -134,6 +148,26 @@
 	</div>
 </section>
 <!--/ End Produk -->
+
+<!--Layanan BKC -->
+<section class="call-action overlay" style="background-image:url({{ asset('assets/frontend/img/cta-bg.jpg') }}">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-12">
+				<div class="call-inner">
+					<h2>Layanan Bank BKC</h2>
+					<p>Bank BKC terus meningkatkan layanan yang unggul dan berdaya saing</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-12">
+				<div class="button">
+					<a href="portfolio.html" class="bizwheel-btn theme-2 effect" style="border-radius: 25px;">Lihat layanan Bank BKC <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Layanan-->
 
 <!-- Suku Bunga -->
 <section class="Testimonials" style="padding-top:50px;padding-bottom:50px;background-size: cover;background-position: center;background-repeat: no-repeat;background-image:url(assets/frontend/img/profil.png)">
@@ -272,24 +306,10 @@
 <!-- End Dashboard -->
 
 <!-- Kalkulator -->
-@include('frontend.kalkulator')
+{{-- @include('frontend.kalkulator') --}}
 <!-- End Kalkulator-->
 
-<!-- OJK -->
-<section class="call-action overlay" style="opacity: 0.98;background-image: url({{ asset('assets/frontend/img/banner1.png') }}">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-9 col-12">
-				<div class="call-inner">
-					<h2>Terdaftar dan diawasi oleh <br>Otoritas Jasa Keuangan (OJK)</h2>
-					<p>Kegiatan operasional perusahaan pinjaman diawasi dan harus sesuai dengan ketentuan<br>yang ditetapkan oleh OJK</p>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-</section>
-<!--/ End OJK -->
+
 
 {{-- <section class="about-us section-space" style="background-size: cover;background-position: center;background-repeat: no-repeat;background-image:url({{ asset('assets/frontend/img/profil.png') }})">
 	<div class="container">
@@ -342,7 +362,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-12">
-				<div class="img-feature " style="max-width: 80%;">
+				<div class="img-feature " style="max-width: 100%;">
 					
 					<img src="{{ asset('assets/frontend/img/800x725.png') }}" alt="Video Thumbnail">
 
@@ -397,25 +417,21 @@
 	</div> 
 </section>
 <!-- End Profil -->
-
-<section class="call-action overlay" style="background-image:url({{ asset('assets/frontend/img/cta-bg.jpg') }}">
+<!-- OJK -->
+<section class="call-action overlay" style="opacity: 0.98;background-image: url({{ asset('assets/frontend/img/banner1.png') }}">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-9 col-12">
 				<div class="call-inner">
-					<h2>Layanan Bank BKC</h2>
-					<p>Bank BKC terus meningkatkan layanan yang unggul dan berdaya saing</p>
+					<h2>Terdaftar dan diawasi oleh <br>Otoritas Jasa Keuangan (OJK)</h2>
+					<p>Kegiatan operasional perusahaan pinjaman diawasi dan harus sesuai dengan ketentuan<br>yang ditetapkan oleh OJK</p>
 				</div>
 			</div>
-			<div class="col-lg-3 col-12">
-				<div class="button">
-					<a href="portfolio.html" class="bizwheel-btn theme-2 effect" style="border-radius: 25px;">Lihat layanan Bank BKC</a>
-				</div>
-			</div>
+			
 		</div>
 	</div>
 </section>
-		
+<!--/ End OJK -->
 <!-- Portfolio -->
 <section class="portfolio section-space">
 	<div class="container">
@@ -436,8 +452,8 @@
 		
 		<div class="row">
 			<div class="col-12">
-				<div class="portfolio-main">
-					<div id="portfolio-item" class="portfolio-item-active">
+				<div class="blog-latest blog-latest-slider">
+					<div class="single-slider">
 						<div class="cbp-item business animation">
 							<!-- Single Portfolio -->
 							<div class="single-portfolio">
@@ -451,10 +467,10 @@
 								</div>
 							</div>
 							<!--/ End Single Portfolio -->
-						</div>
-
+						</div>							
+					</div>
+					<div class="single-slider">
 						<div class="cbp-item seo consulting">
-							<!-- Single Portfolio -->
 							<div class="single-portfolio">
 								<div class="portfolio-head overlay">
 									<img src="{{ asset('assets/frontend/img/prestasi/pa_2.png') }}" alt="#">
@@ -465,11 +481,11 @@
 									<p>Infobank, 2011-2015</p>
 								</div>
 							</div>
-							<!--/ End Single Portfolio -->
 						</div>
-
-						<div class="cbp-item marketing seo">
-							<!-- Single Portfolio -->
+						
+					</div>
+					<div class="single-slider">
+						<div class="cbp-item business animation">
 							<div class="single-portfolio">
 								<div class="portfolio-head overlay">
 									<img src="{{ asset('assets/frontend/img/prestasi/pa_3.png') }}" alt="#">
@@ -480,9 +496,21 @@
 									<p>Infobank, 2012-2016</p>
 								</div>
 							</div>
-							<!--/ End Single Portfolio -->
 						</div>
-
+					</div>
+					<div class="single-slider">
+						<div class="cbp-item business animation">
+						<div class="single-portfolio">
+							<div class="portfolio-head overlay">
+								<img src="{{ asset('assets/frontend/img/prestasi/pa_4.png') }}" alt="#">
+								<a class="more" href="#"><i class="fa fa-long-arrow-right"></i></a>
+							</div>
+							<div class="portfolio-content">
+								<h4>Golden Awards 2017</h4>
+								<p>Infobank, 2012-2016</p>
+							</div>
+						</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -492,66 +520,12 @@
 	<div align="center">
 		<div class="col-lg-9 col-12">
 			<div class="call-inner">
-				<a href="prestasi.php" class="bizwheel-btn">Selengkapnya</a>
+				<a href="prestasi.php" class="bizwheel-btn theme-2">Selengkapnya</a>
 			</div>
 		</div>
 	</div>	
 </section>
 <!--/ End Portfolio -->
-<!-- Client Area -->
-<div class="clients " style="background: #4987ce;">
-	
-	<div class="container">
-		{{-- <div class="row"> --}}
-			{{-- <div class="col-12"> --}}
-				<marquee align="left"  onmouseout="this.start()" onmouseover="this.stop()" scrollamount="5">
-					<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-1.png') }}" alt="#"></a>
-					<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-2.png') }}" alt="#"></a>
-					<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-3.png') }}" alt="#"></a>
-					<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-4.png') }}" alt="#"></a>
-					<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-5.png') }}" alt="#"></a>
-					<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-6.png') }}" alt="#"></a>
-				</marquee>
-				{{-- <div class="partner-slider" data-margin="40" data-slides_per_view="6" data-autoplay="yes" data-hide_control="yes" data-hide_buttons="yes">
-					
-					<div class="single-slider">
-						<div class="single-client">
-						</div>
-					</div>
-					
-					<div class="single-slider">
-						<div class="single-client">
-						</div>
-					</div>
-				
-					<div class="single-slider">
-						<div class="single-client">
-						</div>
-					</div>
-				
-					<div class="single-slider">
-						<div class="single-client">
-						</div>
-					</div>
-				
-					<div class="single-slider">
-						<div class="single-client">
-						</div>
-					</div>
-				
-					<div class="single-slider">
-						<div class="single-client">
-						</div>
-					</div>
-				
-				</div> --}}
-				
-			{{-- </div> --}}
-		{{-- </div> --}}
-	</div>
-
-</div>
-<!--/ End Client Area -->
 
 		<!-- Testimonials -->
 		<section class="Testimonials section-space"  style="background-repeat: no-repeat;background-image:url(assets/frontend/img/1500x700.png)">
@@ -642,10 +616,33 @@
 		</section>
 		<!--/ End Testimonials -->
 		
-		
-		
+		<!-- OJK -->
+		<section class="call-actions" style="height:300px;background-image: url({{ asset('assets/frontend/img/maps_web.png') }}">
+				
+			<div class="container">
+				<div class="row">
+				<div class="col-lg-9 col-12">
+					<div class="call-inners">
+						<h2>Temukan Lokasi Bank BKC</h2>
+						<p>Bank BKC memiliki lokasi pelayanan yang tersebar di 12 cabang di Kabupaten Cirebon<br>yang ditetapkan oleh OJK</p>
+
+					</div>
+					
+				</div>
+				</div>
+				<div class="pull-right">
+					<div class="col-lg-12 col-12">
+						<div class="button">
+							<a href="portfolio.html" class="bizwheel-btn theme-2" style="border-radius: 25px;">Cari Lokasi <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</section>
+		<!--/ End OJK -->
 		<!-- Latest Blog -->
-		{{-- <section class="latest-blog section-space">
+		<section class="latest-blog section-space">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
@@ -667,13 +664,13 @@
 							<div class="single-slider">
 								<div class="single-news ">
 									<div class="news-head overlay">
-										<span class="news-img" style="background-image:url('https://via.placeholder.com/700x530')"></span>
+										<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img1.png') }})"></span>
 										<a href="#" class="bizwheel-btn theme-2">Read more</a>
 									</div>
 									<div class="news-body">
-										<div class="news-content">
-											<h3 class="news-title"><a href="404.html">We Provide you Best &amp; Creative News Service</a></h3>
-											<div class="news-text"><p>Sed tempus pulvinar augue ut euismod. Donec a nisi volutpat, dignissim mauris eget. Quisque vitae nunc sit amet eros pellentesque tempus at sit amet sem. Maecenas feugiat mauris</p></div>
+										<div class="news-content ext1">
+											<h3 class="news-title"><a href="404.html">Launching Virtual Acount &amp; kredit keppincut </a></h3>
+											<div class="news-text"><p>Launching Virtual Acount dan kredit keppincut dalam rangka percepatan akses keuangan</p></div>
 											<ul class="news-meta">
 												<li class="date"><i class="fa fa-calendar"></i>April 2020</li>
 												<li class="view"><i class="fa fa-comments"></i>0</li>
@@ -687,13 +684,15 @@
 								
 								<div class="single-news ">
 									<div class="news-head overlay">
-										<span class="news-img" style="background-image:url('https://via.placeholder.com/700x530')"></span>
+										<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img2.png') }})"></span>
 										<a href="#" class="bizwheel-btn theme-2">Read more</a>
 									</div>
 									<div class="news-body">
-										<div class="news-content">
-											<h3 class="news-title"><a href="404.html">We Provide you Best &amp; Creative News Update</a></h3>
-											<div class="news-text"><p>Sed tempus pulvinar augue ut euismod. Donec a nisi volutpat, dignissim mauris eget. Quisque vitae nunc sit amet eros pellentesque tempus at sit amet sem. Maecenas feugiat mauris</p></div>
+										<div class="news-content ext1">
+											<h3 class="news-title"><a href="404.html">Bank BKC melakukan penyaluran Dana CSR</a></h3>
+											<div class="news-text"><p>Bank BKC melakukan penyaluran Dana CSR untuk pembangunan kelas baru.
+
+												Direktur Utama Bank BKC secara simbolis menyerahkan bantuan kepada yayasan sosial </p></div>
 											<ul class="news-meta">
 												<li class="date"><i class="fa fa-calendar"></i>Desember 2020</li>
 												<li class="view"><i class="fa fa-comments"></i>0</li>
@@ -707,13 +706,13 @@
 								
 								<div class="single-news ">
 									<div class="news-head overlay">
-										<span class="news-img" style="background-image:url('https://via.placeholder.com/700x530')"></span>
+										<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img3.png') }})"></span>
 										<a href="#" class="bizwheel-btn theme-2">Read more</a>
 									</div>
 									<div class="news-body">
-										<div class="news-content">
-											<h3 class="news-title"><a href="404.html">We Provide you Best &amp; Creative News Service</a></h3>
-											<div class="news-text"><p>Sed tempus pulvinar augue ut euismod. Donec a nisi volutpat, dignissim mauris eget. Quisque vitae nunc sit amet eros pellentesque tempus at sit amet sem. Maecenas feugiat mauris</p></div>
+										<div class="news-content ">
+											<h3 class="news-title"><a href="404.html">Edukasi Literasi Keuangan Kepada Masyarakat</a></h3>
+											<div class="news-text"><p><div class="ext1">Sesuai SE Otoritas Jasa Keuangan (OJK) Nomor 30/SEOJK.07/2017 tentang Pelaksanaan </div></p></div>
 											<ul class="news-meta">
 												<li class="date"><i class="fa fa-calendar"></i>Januari 2021</li>
 												<li class="view"><i class="fa fa-comments"></i>0</li>
@@ -725,13 +724,13 @@
 							<div class="single-slider">
 								<div class="single-news ">
 									<div class="news-head overlay">
-										<span class="news-img" style="background-image:url('https://via.placeholder.com/700x530')"></span>
+										<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img4.png') }})"></span>
 										<a href="#" class="bizwheel-btn theme-2">Read more</a>
 									</div>
 									<div class="news-body">
 										<div class="news-content">
-											<h3 class="news-title"><a href="404.html">We Provide you Best &amp; Creative News Service</a></h3>
-											<div class="news-text"><p>Sed tempus pulvinar augue ut euismod. Donec a nisi volutpat, dignissim mauris eget. Quisque vitae nunc sit amet eros pellentesque tempus at sit amet sem. Maecenas feugiat mauris</p></div>
+											<h3 class="news-title"><a href="404.html">Seluruh Karyawan melaksanakan vaksin covid-19</a></h3>
+											<div class="news-text"><p>Direktur utama dan direktur operasional beserta seluruh Karyawan</p></div>
 											<ul class="news-meta">
 												<li class="date"><i class="fa fa-calendar"></i>Februari 2021</li>
 												<li class="view"><i class="fa fa-comments"></i>0</li>
@@ -744,10 +743,27 @@
 					</div>
 				</div>
 			</div>
-		</section> --}}
+		</section> 
 		<!--/ End Latest Blog -->
 		
-		
+		<!-- Client Area -->
+		<div class="clients " style="background-size: cover;background-position: center;background-image:url(assets/frontend/img/profil.png)">
+			
+			<div class="container">
+			
+					<marquee align="left"  onmouseout="this.start()" onmouseover="this.stop()" scrollamount="5">
+						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-1.png') }}" alt="#"></a>
+						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-2.png') }}" alt="#"></a>
+						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-3.png') }}" alt="#"></a>
+						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-4.png') }}" alt="#"></a>
+						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-5.png') }}" alt="#"></a>
+						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-6.png') }}" alt="#"></a>
+					</marquee>
+						
+			</div>
+
+		</div>
+		<!--/ End Client Area -->
 		
 
 		<!-- Chat -->

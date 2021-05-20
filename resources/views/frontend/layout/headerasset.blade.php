@@ -229,6 +229,57 @@
 			opacity:1;
 		}
 
+		/* background */
+		.call-actions{
+			background-size:cover;
+			background-position:center;
+			padding:50px 0;
+		}
+		.call-actions.overlays:before {
+			opacity: 0.92;
+			
+		}
+		.call-actions .call-inners {
+			z-index: 33;
+			position: relative;
+		}
+		.call-actions .call-inners p {
+			color: #eee;
+			font-size: 15px;
+		}
+
+		.call-actions .call-inners h2 {
+			font-size: 34px;
+			line-height: 35px;
+			color: #fff;
+			margin-bottom: 15px;
+			font-weight: 700;
+		}
+		
+		.call-actions .call-inners:after {
+			content: "";
+		}
+		.overlays::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			content: "";
+			transition: all 0.4s ease;
+			z-index: 1;
+		}
+
+		/* scroll berita */
+		.ex1 {
+			height: 40px;
+			width: 200px;
+			overflow-y: scroll;
+		}
+
+
+		
+
 		
 		</style>
 	</head>

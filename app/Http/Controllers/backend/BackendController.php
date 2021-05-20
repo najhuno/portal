@@ -262,7 +262,7 @@ class BackendController extends Controller
 
         // share data to view
         view()->share('employee',$data);
-        $pdf = PDF::loadView('viewNasabahBaru', $data);
+        $pdf = PDF::loadView('reportNasabahBaru', $data);
         
         // download PDF file with download method
         return $pdf->download('pdf_file.pdf');

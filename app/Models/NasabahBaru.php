@@ -11,7 +11,7 @@ class NasabahBaru extends Model
 
     protected $table = "nasabah_barus";
 
-    protected $fillable = ['namalengkap','nik','nohp','email','alamat','pengajuan'];
+    protected $fillable = ['namalengkap','nik','nohp','email','alamat','pengajuan','cabang'];
 
 
 }

@@ -21,6 +21,7 @@ class CreateNasabahBarusTable extends Migration
             $table->string('email');
             $table->string('alamat');
             $table->string('pengajuan');
+            $table->string('cabang');
             $table->timestamps();
         });
     }

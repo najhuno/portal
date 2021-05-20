@@ -20,22 +20,46 @@
             <div class="card-tools">
                 <div class="btn-group">
                     <div class="pull-right mb-2">
+                        <a class="btn btn-danger" href="{{ url('download/pdf')}}"> Download</a>
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="pull-right mb-2">
                         <a class="btn btn-primary" onClick="add()" href="javascript:void(0)"> Create {{ $title }}</a>
                     </div>
+                   
                 </div>
             </div>
         </div>
         <div class="card-body">
-            <table class="table table-bordered" id="myTable">
+            <table class="table table-bordered mb-5">
                 <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Jenis Produk</th>
-                        <th>Produk</th>
-                        <th>Suku Bunga</th>
-                        <th>Aksi</th>
+                    <tr class="table-primary">
+                        <th scope="col">No</th>
+                        <th scope="col">Nama</th>
+                        <th scope="col">Nik</th>
+                        <th scope="col">No Hp</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Alamat</th>
+                        <th scope="col">Pengajuan</th>
+                        <th scope="col">Cabang</th>
+                        <th scope="col">Tgl Dibuat</th>
                     </tr>
                 </thead>
+                <tbody>
+                    @foreach($data ?? '' as $datas)
+                    <tr>
+                        <th scope="row">{{ $datas->id }}</th>
+                        <td>{{ $datas->namalengkap }}</td>
+                        <td>{{ $datas->nik }}</td>
+                        <td>{{ $datas->nohp }}</td>
+                        <td>{{ $datas->email }}</td>
+                        <td>{{ $datas->alamat }}</td>
+                        <td>{{ $datas->pengajuan }}</td>
+                        <td>{{ $datas->cabang }}</td>
+                        <td>{{ $datas->created_at }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
             </table>
         </div>
     </div>

@@ -9,10 +9,23 @@
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
 				<h4 class="modal-title">Mohon infokan data diri Anda</h4>
 			</div>
+			<br>
 			<form action="javascript:void(0)" id="addNasabahForm" name="addNasabahForm" class="form-horizontal" method="POST" enctype="multipart/form-data">
 
 			<div class="modal-body">
 					<input type="hidden" name="id" id="id">
+					<div class="form-group">
+						<div class="col-sm-12">
+							<label>Dibuat dikantor cabang :</label><br>
+							<select class="form-control" name="cabang" id="cabang">
+								<option value="Kantor Pusat BPR Babakan">Kantor Pusat BPR Babakan</option>
+								<option value="Cabang BPR Waled">Cabang BPR Waled</option>
+								<option value="Cabang BPR Lemah Abang">Cabang BPR Lemah Abang</option>
+								<option value="Cabang BPR Sumber">Cabang BPR Sumber</option>
+								<option value="Cabang BPR Weru">Cabang BPR Weru</option>
+							</select>
+						</div>
+					</div>
 					<div class="form-group">
 						<div class="col-sm-12">
 							<input type="text" class="form-control" id="namanasabah" name="namanasabah" placeholder="Nama Lengkap" required="">
@@ -34,7 +47,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-					<div class="col-sm-12">
+						<div class="col-sm-12">
 							<input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat"  required="">
 						</div>
 					</div>
