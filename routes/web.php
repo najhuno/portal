@@ -27,6 +27,8 @@ Route::get('/kredit/{jenis?}', [HomeController::class, 'kredit'])->name('kredit'
 Route::get('/getdashboard', [HomeController::class, 'getdashboard'])->name('getdashboard');
 Route::get('/getSukuBunga', [HomeController::class, 'getSukuBunga'])->name('getSukuBunga');
 Route::post('/storeNasabah', [HomeController::class, 'storeNasabah'])->name('storeNasabah');
+Route::get('/profile', [HomeController::class, 'profile'])->name('profile');
+
 
 
 

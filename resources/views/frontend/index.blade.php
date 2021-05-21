@@ -61,8 +61,84 @@
 	</div>	
 </section>
 <!--/ End Hero Slider -->
+
+<!-- Profil -->
+<section class="about-us section-space " style="padding-top:20px;padding-bottom:20px; background-size: cover;background-position: center;background-repeat: no-repeat;background-image:url({{ asset('assets/frontend/img/profil.png') }})">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="img-feature " style="max-width: 100%;">
+					
+					<img src="{{ asset('assets/frontend/img/800x725.png') }}" alt="Video Thumbnail">
+
+					<div class="video-play">
+						<a type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/-3SOWKUuI7Q" data-target="#myModal">
+							<i class="fa fa-play"></i>
+						</a>
+						<div class="waves-block">
+							<div class="waves wave-1"></div>
+							<div class="waves wave-2"></div>
+							<div class="waves wave-3"></div>
+						</div>
+					</div><span>Watch 3 minutes</span>
+				</div>
+			</div>
+			
+			<div class="col-lg-8 col-md-6 col-12">
+				<div class="about-content section-title default text-left">
+					<div class="section-top">
+						<h1><span>About Us</span><b>Profil Perusahaan</b></h1>
+					</div>
+					<div class="section-bottom">
+						<div class="text">
+							<p>PERUMDA BPR Kabupaten Cirebon adalah hasil penggabungan 12 (Dua belas) Perusahaan Daerah milik Pemerintah Kabupaten Cirebon. Penggabungan usaha (Merger) tersebut antara lain:
+								PD. BPR Sumber, PD. BPR Arjawinangun, PD. BPR Waled, PD. BPR Karangsembung, PD. BPR Palimanan, PD. BPR Plumbon, PD. BPR Lemahabang, PD. BPR Susukan, PD. BPR Weru, PD. BPR Cirebon Barat dan PD. BPR Cirebon Utara ke dalam PD. BPR Babakan.</p>
+						</div>
+						<div class="button">
+							<a href="about.html" class="bizwheel-btn theme-2">Lihat Selengkapnya<i class="fa fa-angle-right"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- show video -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" style="padding-top: 5%;" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">		
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">X</span>
+					</button>   
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> 
+</section>
+<!-- End Profil -->
+
+<!-- OJK -->
+<section class="call-action overlay" style="padding-top: 30px;padding-bottom: 30px;opacity: 0.98;background-image: url({{ asset('assets/frontend/img/banner1.png') }}">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9 col-12">
+				<div class="call-inner">
+					<h2>Terdaftar dan diawasi oleh <br>Otoritas Jasa Keuangan (OJK)</h2>
+					<p>Kegiatan operasional perusahaan pinjaman diawasi dan harus sesuai dengan ketentuan<br>yang ditetapkan oleh OJK</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
+<!--/ End OJK -->
+
 <!-- Produk -->
-<section class="blog-layout news-default section-space"id="produkkredit">
+<section class="blog-layout news-default section-space"id="produkkredit" style="padding-top:20px;background: #c3fff4;">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -148,26 +224,66 @@
 	</div>
 </section>
 <!--/ End Produk -->
-
-<!--Layanan BKC -->
-<section class="call-action overlay" style="background-image:url({{ asset('assets/frontend/img/cta-bg.jpg') }}">
+<!--/ Dashboard -->
+<section class="counterup">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-9 col-12">
-				<div class="call-inner">
-					<h2>Layanan Bank BKC</h2>
-					<p>Bank BKC terus meningkatkan layanan yang unggul dan berdaya saing</p>
+			<div class="col-lg-3 col-md-6 col-12">
+				<!-- Single Counterup -->
+				<div class="single-counter">
+					<div class="icon"><i class="fa fa-book"></i></div>
+					<div class="conter-content">
+						<div class="counter-head">
+							<h3><b class="number" id="NasabahTabunganvalue"></b><span></span></h3>
+						</div>
+						<p id="NasabahTabungan"></p>
+					</div>
 				</div>
+				<!--/ End Single Counterup -->
 			</div>
-			<div class="col-lg-3 col-12">
-				<div class="button">
-					<a href="portfolio.html" class="bizwheel-btn theme-2 effect" style="border-radius: 25px;">Lihat layanan Bank BKC <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+			<div class="col-lg-3 col-md-6 col-12">
+				<!-- Single Counterup -->
+				<div class="single-counter">
+					<div class="icon"><i class="fa fa-users"></i></div>
+					<div class="conter-content">
+						<div class="counter-head">
+							<h3><b class="number" id="NasabahDepositovalue"></b><span></span></h3>
+						</div>
+						<p id="NasabahDeposito"></p>
+					</div>
 				</div>
+				<!--/ End Single Counterup -->
+			</div>
+			<div class="col-lg-3 col-md-6 col-12">
+				<!-- Single Counterup -->
+				<div class="single-counter">
+					<div class="icon"><i class="fa fa-life-ring"></i></div>
+					<div class="conter-content">
+						<div class="counter-head">
+							<h3><b class="number" id="NasabahPinjamanvalue"></b><span></span></h3>
+						</div>
+						<p id="NasabahPinjaman"></p>
+					</div>
+				</div>
+				<!--/ End Single Counterup -->
+			</div>
+			<div class="col-lg-3 col-md-6 col-12">
+				<!-- Single Counterup -->
+				<div class="single-counter">
+					<div class="icon"><i class="fa fa-fire"></i></div>
+					<div class="conter-content">
+						<div class="counter-head">
+							<h3><b class="number" id="NasabahBaruvalue"></b><span></span></h3>
+						</div>
+						<p id="NasabahBaru"></p>
+					</div>
+				</div>
+				<!--/ End Single Counterup -->
 			</div>
 		</div>
 	</div>
 </section>
-<!-- End Layanan-->
+<!-- End Dashboard -->
 
 <!-- Suku Bunga -->
 <section class="Testimonials" style="padding-top:50px;padding-bottom:50px;background-size: cover;background-position: center;background-repeat: no-repeat;background-image:url(assets/frontend/img/profil.png)">
@@ -211,10 +327,7 @@
 							<td style="text-align: left; background-color: #ddd;"><h5 id="umum"></h5></td>
 							<td style="text-align: left; background-color: #ddd;"><h5 id="umumvalue"></h5></td>
 							</tr>
-							<tr>
-							<td style="text-align: left;">Deposito 12 Bulan</td>
-							<td style="text-align: left;">6,50 %</td>
-							</tr>
+							
 							</tbody>
 						</table>
 					</div>
@@ -244,66 +357,264 @@
 </section>
 <!-- End Suku bunga -->
 
-<!--/ Dashboard -->
-<section class="counterup">
+
+<!--Layanan BKC -->
+<section class="call-action overlay" style="background-image:url({{ asset('assets/frontend/img/cta-bg.jpg') }}">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3 col-md-6 col-12">
-				<!-- Single Counterup -->
-				<div class="single-counter">
-					<div class="icon"><i class="fa fa-book"></i></div>
-					<div class="conter-content">
-						<div class="counter-head">
-							<h3><b class="number" id="NasabahTabunganvalue"></b><span>K</span></h3>
-						</div>
-						<p id="NasabahTabungan"></p>
-					</div>
+			<div class="col-lg-9 col-12">
+				<div class="call-inner">
+					<h2>Layanan Bank BKC</h2>
+					<p>Bank BKC terus meningkatkan layanan yang unggul dan berdaya saing</p>
 				</div>
-				<!--/ End Single Counterup -->
 			</div>
-			<div class="col-lg-3 col-md-6 col-12">
-				<!-- Single Counterup -->
-				<div class="single-counter">
-					<div class="icon"><i class="fa fa-users"></i></div>
-					<div class="conter-content">
-						<div class="counter-head">
-							<h3><b class="number" id="NasabahDepositovalue"></b><span>+</span></h3>
-						</div>
-						<p id="NasabahDeposito"></p>
-					</div>
+			<div class="col-lg-3 col-12">
+				<div class="button">
+					<a href="portfolio.html" class="bizwheel-btn theme-2 effect" style="border-radius: 25px;">Lihat layanan Bank BKC <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 				</div>
-				<!--/ End Single Counterup -->
-			</div>
-			<div class="col-lg-3 col-md-6 col-12">
-				<!-- Single Counterup -->
-				<div class="single-counter">
-					<div class="icon"><i class="fa fa-life-ring"></i></div>
-					<div class="conter-content">
-						<div class="counter-head">
-							<h3><b class="number" id="NasabahPinjamanvalue"></b><span>+</span></h3>
-						</div>
-						<p id="NasabahPinjaman"></p>
-					</div>
-				</div>
-				<!--/ End Single Counterup -->
-			</div>
-			<div class="col-lg-3 col-md-6 col-12">
-				<!-- Single Counterup -->
-				<div class="single-counter">
-					<div class="icon"><i class="fa fa-fire"></i></div>
-					<div class="conter-content">
-						<div class="counter-head">
-							<h3><b class="number" id="NasabahBaruvalue"></b><span>+</span></h3>
-						</div>
-						<p id="NasabahBaru"></p>
-					</div>
-				</div>
-				<!--/ End Single Counterup -->
 			</div>
 		</div>
 	</div>
 </section>
-<!-- End Dashboard -->
+<!-- End Layanan-->
+
+<!-- Kabar Terkini Berita -->
+<section class="latest-blog section-space" style="padding-top: 10px;background: #c3fff4;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+				<div class="section-title default text-center">
+					<div class="section-top">
+						<h1><span>Latest</span><b> Kabar Terkini</b></h1>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="blog-latest blog-latest-slider">
+					<div class="single-slider">
+						<div class="single-news ">
+							<div class="news-head overlay">
+								<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img1.png') }})"></span>
+								<a href="#" class="bizwheel-btn theme-2">Read more</a>
+							</div>
+							<div class="news-body">
+								<div class="news-content ext1">
+									<h3 class="news-title"><a href="404.html">Launching Virtual Acount &amp; kredit keppincut </a></h3>
+									<div class="news-text"><p>Launching Virtual Acount dan kredit keppincut dalam rangka percepatan akses keuangan</p></div>
+									<ul class="news-meta">
+										<li class="date"><i class="fa fa-calendar"></i>April 2020</li>
+										<li class="view"><i class="fa fa-comments"></i>0</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					
+					</div>
+					<div class="single-slider">
+						
+						<div class="single-news ">
+							<div class="news-head overlay">
+								<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img2.png') }})"></span>
+								<a href="#" class="bizwheel-btn theme-2">Read more</a>
+							</div>
+							<div class="news-body">
+								<div class="news-content ext1">
+									<h3 class="news-title"><a href="404.html">Bank BKC melakukan penyaluran Dana CSR</a></h3>
+									<div class="news-text"><p>Bank BKC melakukan penyaluran Dana CSR untuk pembangunan kelas baru.
+
+										Direktur Utama Bank BKC secara simbolis menyerahkan bantuan kepada yayasan sosial </p></div>
+									<ul class="news-meta">
+										<li class="date"><i class="fa fa-calendar"></i>Desember 2020</li>
+										<li class="view"><i class="fa fa-comments"></i>0</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="single-slider">
+						
+						<div class="single-news ">
+							<div class="news-head overlay">
+								<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img3.png') }})"></span>
+								<a href="#" class="bizwheel-btn theme-2">Read more</a>
+							</div>
+							<div class="news-body">
+								<div class="news-content ">
+									<h3 class="news-title"><a href="404.html">Edukasi Literasi Keuangan Kepada Masyarakat</a></h3>
+									<div class="news-text"><p><div class="ext1">Sesuai SE Otoritas Jasa Keuangan (OJK) Nomor 30/SEOJK.07/2017 tentang Pelaksanaan </div></p></div>
+									<ul class="news-meta">
+										<li class="date"><i class="fa fa-calendar"></i>Januari 2021</li>
+										<li class="view"><i class="fa fa-comments"></i>0</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="single-slider">
+						<div class="single-news ">
+							<div class="news-head overlay">
+								<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img4.png') }})"></span>
+								<a href="#" class="bizwheel-btn theme-2">Read more</a>
+							</div>
+							<div class="news-body">
+								<div class="news-content">
+									<h3 class="news-title"><a href="404.html">Seluruh Karyawan melaksanakan vaksin covid-19</a></h3>
+									<div class="news-text"><p>Direktur utama dan direktur operasional beserta seluruh Karyawan</p></div>
+									<ul class="news-meta">
+										<li class="date"><i class="fa fa-calendar"></i>Februari 2021</li>
+										<li class="view"><i class="fa fa-comments"></i>0</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section> 
+<!--/ End Kabar Terkini Berita -->
+<!-- Penghargaan -->
+{{-- <section class="portfolio section-space" style="padding-top: 0px;padding-bottom: 40px;background: #c3fff4;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
+				<div class="section-title default text-center">
+					<div class="section-top">
+						<h1><b>Prestasi &amp; Penghargaan</b></h1>
+					</div>
+					<div class="section-bottom">
+						<div class="text">
+							<p>BANK BKC berkomitmen secara konsisten mencetak kinerja yang baik</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-12">
+				<div class="blog-latest blog-latest-slider">
+					<div class="single-slider" style="width: 300px;">
+						<div class="cbp-item business animation"> --}}
+							<!-- Single Portfolio -->
+							{{-- <div class="single-portfolio">
+								<div class="portfolio-head overlay">
+									<img src="{{ asset('assets/frontend/img/prestasi/pa_1.png') }}" alt="#">
+									<a class="more" href="#"><i class="fa fa-long-arrow-right"></i></a>
+								</div>
+								<div class="portfolio-content">
+									<h4>Golden Awards 2015</h4>
+									<p>Infobank, 2010-2014</p>
+								</div>
+							</div> --}}
+							<!--/ End Single Portfolio -->
+						{{-- </div>							
+					</div>
+					<div class="single-slider"style="width: 300px;">
+						<div class="cbp-item seo consulting">
+							<div class="single-portfolio">
+								<div class="portfolio-head overlay">
+									<img src="{{ asset('assets/frontend/img/prestasi/pa_2.png') }}" alt="#">
+									<a class="more" href="#"><i class="fa fa-long-arrow-right"></i></a>
+								</div>
+								<div class="portfolio-content">
+									<h4><a href="portfolio-single.html">Golden Awards 2016</a></h4>
+									<p>Infobank, 2011-2015</p>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					<div class="single-slider" style="width: 50%;">
+						<div class="cbp-item business animation">
+							<div class="single-portfolio">
+								<div class="portfolio-head overlay">
+									<img src="{{ asset('assets/frontend/img/prestasi/pa_3.png') }}" alt="#">
+									<a class="more" href="#"><i class="fa fa-long-arrow-right"></i></a>
+								</div>
+								<div class="portfolio-content">
+									<h4>Golden Awards 2017</h4>
+									<p>Infobank, 2012-2016</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="single-slider" style="width: 50%;">
+						<div class="cbp-item business animation">
+						<div class="single-portfolio">
+							<div class="portfolio-head overlay">
+								<img src="{{ asset('assets/frontend/img/prestasi/pa_4.png') }}" alt="#">
+								<a class="more" href="#"><i class="fa fa-long-arrow-right"></i></a>
+							</div>
+							<div class="portfolio-content">
+								<h4>Golden Awards 2017</h4>
+								<p>Infobank, 2012-2016</p>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br><br>
+	<div align="center">
+		<div class="col-lg-9 col-12">
+			<div class="call-inner">
+				<a href="prestasi.php" class="bizwheel-btn theme-2">Selengkapnya</a>
+			</div>
+		</div>
+	</div>	
+</section> --}}
+<!--/ End Penghargaan -->
+
+<!-- Lokasi Cabang -->
+<section class="call-actions" style="height:300px;background-image: url({{ asset('assets/frontend/img/maps_web.png') }}">
+		
+	<div class="container">
+		<div class="row">
+		<div class="col-lg-9 col-12">
+			<div class="call-inners">
+				<h2>Temukan Lokasi Bank BKC</h2>
+				<p>Bank BKC memiliki lokasi pelayanan yang tersebar di 12 cabang di Kabupaten Cirebon<br>yang ditetapkan oleh OJK</p>
+
+			</div>
+			
+		</div>
+		</div>
+		<div class="pull-right">
+			<div class="col-lg-12 col-12">
+				<div class="button">
+					<a href="portfolio.html" class="bizwheel-btn theme-2" style="border-radius: 25px;">Cari Lokasi <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+</section>
+<!--/ End OJK -->
+
+	
+<!-- Client Area -->
+<div class="clients " style="background-size: cover;background-position: center;background-image:url(assets/frontend/img/profil.png)">
+	<div class="container">
+		<marquee align="left"  onmouseout="this.start()" onmouseover="this.stop()" scrollamount="5">
+			<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-1.png') }}" alt="#"></a>
+			<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-2.png') }}" alt="#"></a>
+			<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-3.png') }}" alt="#"></a>
+			<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-4.png') }}" alt="#"></a>
+			<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-5.png') }}" alt="#"></a>
+			<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-6.png') }}" alt="#"></a>
+		</marquee>
+	</div>
+</div>
+<!--/ End Client Area -->
+
 
 <!-- Kalkulator -->
 {{-- @include('frontend.kalkulator') --}}
@@ -357,414 +668,6 @@
 	</div>
 </section> --}}
 
-<!-- Profil -->
-<section class="about-us section-space " style="background-size: cover;background-position: center;background-repeat: no-repeat;background-image:url({{ asset('assets/frontend/img/profil.png') }})">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-md-6 col-12">
-				<div class="img-feature " style="max-width: 100%;">
-					
-					<img src="{{ asset('assets/frontend/img/800x725.png') }}" alt="Video Thumbnail">
-
-					<div class="video-play">
-						<a type="button" class="btn btn-primary video-btn" data-toggle="modal" data-src="https://www.youtube.com/embed/-3SOWKUuI7Q" data-target="#myModal">
-							<i class="fa fa-play"></i>
-						</a>
-						<div class="waves-block">
-							<div class="waves wave-1"></div>
-							<div class="waves wave-2"></div>
-							<div class="waves wave-3"></div>
-						</div>
-					</div><span>Watch 3 minutes</span>
-				</div>
-			</div>
-			
-			<div class="col-lg-5 col-md-6 col-12">
-				<div class="about-content section-title default text-left">
-					<div class="section-top">
-						<h1><span>About Us</span><b>Profil Perusahaan</b></h1>
-					</div>
-					<div class="section-bottom">
-						<div class="text">
-							<p>PERUMDA BPR Kabupaten Cirebon adalah hasil penggabungan 12 (Dua belas) Perusahaan Daerah milik Pemerintah Kabupaten Cirebon. Penggabungan usaha (Merger) tersebut antara lain:
-								PD. BPR Sumber, PD. BPR Arjawinangun, PD. BPR Waled, PD. BPR Karangsembung, PD. BPR Palimanan, PD. BPR Plumbon, PD. BPR Lemahabang, PD. BPR Susukan, PD. BPR Weru, PD. BPR Cirebon Barat dan PD. BPR Cirebon Utara ke dalam PD. BPR Babakan.</p>
-						</div>
-						<div class="button">
-							<a href="about.html" class="bizwheel-btn theme-2">Lihat Selengkapnya<i class="fa fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- show video -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" style="padding-top: 5%;" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog" role="document">
-			<div class="modal-content">		
-				<div class="modal-body">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">X</span>
-					</button>   
-					{{-- <button title="Close (Esc)" class="close" data-dismiss="modal" aria-label="Close">×</button>      --}}
-					<!-- 16:9 aspect ratio -->
-					<div class="embed-responsive embed-responsive-16by9">
-						<iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> 
-</section>
-<!-- End Profil -->
-<!-- OJK -->
-<section class="call-action overlay" style="opacity: 0.98;background-image: url({{ asset('assets/frontend/img/banner1.png') }}">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-9 col-12">
-				<div class="call-inner">
-					<h2>Terdaftar dan diawasi oleh <br>Otoritas Jasa Keuangan (OJK)</h2>
-					<p>Kegiatan operasional perusahaan pinjaman diawasi dan harus sesuai dengan ketentuan<br>yang ditetapkan oleh OJK</p>
-				</div>
-			</div>
-			
-		</div>
-	</div>
-</section>
-<!--/ End OJK -->
-<!-- Portfolio -->
-<section class="portfolio section-space">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
-				<div class="section-title default text-center">
-					<div class="section-top">
-						<h1><span>Reputation</span><b>Prestasi &amp; Penghargaan</b></h1>
-					</div>
-					<div class="section-bottom">
-						<div class="text">
-							<p>BANK BKC berkomitmen secara konsisten mencetak kinerja yang baik</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-12">
-				<div class="blog-latest blog-latest-slider">
-					<div class="single-slider">
-						<div class="cbp-item business animation">
-							<!-- Single Portfolio -->
-							<div class="single-portfolio">
-								<div class="portfolio-head overlay">
-									<img src="{{ asset('assets/frontend/img/prestasi/pa_1.png') }}" alt="#">
-									<a class="more" href="#"><i class="fa fa-long-arrow-right"></i></a>
-								</div>
-								<div class="portfolio-content">
-									<h4>Golden Awards 2015</h4>
-									<p>Infobank, 2010-2014</p>
-								</div>
-							</div>
-							<!--/ End Single Portfolio -->
-						</div>							
-					</div>
-					<div class="single-slider">
-						<div class="cbp-item seo consulting">
-							<div class="single-portfolio">
-								<div class="portfolio-head overlay">
-									<img src="{{ asset('assets/frontend/img/prestasi/pa_2.png') }}" alt="#">
-									<a class="more" href="#"><i class="fa fa-long-arrow-right"></i></a>
-								</div>
-								<div class="portfolio-content">
-									<h4><a href="portfolio-single.html">Golden Awards 2016</a></h4>
-									<p>Infobank, 2011-2015</p>
-								</div>
-							</div>
-						</div>
-						
-					</div>
-					<div class="single-slider">
-						<div class="cbp-item business animation">
-							<div class="single-portfolio">
-								<div class="portfolio-head overlay">
-									<img src="{{ asset('assets/frontend/img/prestasi/pa_3.png') }}" alt="#">
-									<a class="more" href="#"><i class="fa fa-long-arrow-right"></i></a>
-								</div>
-								<div class="portfolio-content">
-									<h4>Golden Awards 2017</h4>
-									<p>Infobank, 2012-2016</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="single-slider">
-						<div class="cbp-item business animation">
-						<div class="single-portfolio">
-							<div class="portfolio-head overlay">
-								<img src="{{ asset('assets/frontend/img/prestasi/pa_4.png') }}" alt="#">
-								<a class="more" href="#"><i class="fa fa-long-arrow-right"></i></a>
-							</div>
-							<div class="portfolio-content">
-								<h4>Golden Awards 2017</h4>
-								<p>Infobank, 2012-2016</p>
-							</div>
-						</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<br><br>
-	<div align="center">
-		<div class="col-lg-9 col-12">
-			<div class="call-inner">
-				<a href="prestasi.php" class="bizwheel-btn theme-2">Selengkapnya</a>
-			</div>
-		</div>
-	</div>	
-</section>
-<!--/ End Portfolio -->
-
-		<!-- Testimonials -->
-		<section class="Testimonials section-space"  style="background-repeat: no-repeat;background-image:url(assets/frontend/img/1500x700.png)">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 col-md-9 col-12">
-						<div class="section-title default text-left">
-							<div class="section-top">
-								<h1><b>Kata Mereka, Tentang Kami</b></h1>
-							</div>
-							<div class="section-bottom">
-								<div class="text"><p>Beberapa klien hebat kami dan komentar mereka</p></div>
-							</div>
-						</div>
-						<div class="testimonial-inner">
-							<div class="testimonial-slider">
-								<!-- Single Testimonial -->
-								<div class="single-slider">
-									<ul class="star-list">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-									<p>Saya sangat bersyukur dengan<strong>BANK BKC</strong> yang telah membantu realisasi kredit saya untuk membayar biaya Rumah Sakit.</p>
-									<!-- Client Info -->
-									<div class="t-info">
-										<div class="t-left">
-											<div class="client-head"><img src="https://via.placeholder.com/70x70" alt="#"></div>
-											<h2>Yanto Sahroni <span>Karyawan Swasta</span></h2>
-										</div>
-										<div class="t-right">
-											<div class="quote"><i class="fa fa-quote-right"></i></div>
-										</div>
-									</div>
-								</div>
-								<!-- / End Single Testimonial -->
-								<!-- Single Testimonial -->
-								<div class="single-slider">
-									<ul class="star-list">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-									<p><strong>BANK BKC</strong> Memberikan memberikan saya modal usaha sehingga saya bisa membangun usaha sendiri dengan pencairan pinjaman yang cepat.</p>
-									<!-- Client Info -->
-									<div class="t-info">
-										<div class="t-left">
-											<div class="client-head"><img src="https://via.placeholder.com/70x70" alt="#"></div>
-											<h2>Wasnira <span>Owner, Warung Sembako</span></h2>
-										</div>
-										<div class="t-right">
-											<div class="quote"><i class="fa fa-quote-right"></i></div>
-										</div>
-									</div>
-								</div>
-								<!-- / End Single Testimonial -->
-								<!-- Single Testimonial -->
-								<div class="single-slider">
-									<ul class="star-list">
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-										<li><i class="fa fa-star"></i></li>
-									</ul>
-									<p>Bunga Deposito sangat kompetitif, pegawainya sudah banyak, ramah-ramah dan prosesnya cepat serta bunganya bersaing lo. Gak bakal nyesel deh jadi nasabah di sini.</p>	
-									<!-- Client Info -->
-									<div class="t-info">
-										<div class="t-left">
-											<div class="client-head"><img src="https://via.placeholder.com/70x70" alt="#"></div>
-											<h2>Rohidah <span>Deposan, Gebang</span></h2>
-										</div>
-										<div class="t-right">
-											<div class="quote"><i class="fa fa-quote-right"></i></div>
-										</div>
-									</div>
-								</div>
-								<!-- / End Single Testimonial -->
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--/ End Testimonials -->
-		
-		<!-- OJK -->
-		<section class="call-actions" style="height:300px;background-image: url({{ asset('assets/frontend/img/maps_web.png') }}">
-				
-			<div class="container">
-				<div class="row">
-				<div class="col-lg-9 col-12">
-					<div class="call-inners">
-						<h2>Temukan Lokasi Bank BKC</h2>
-						<p>Bank BKC memiliki lokasi pelayanan yang tersebar di 12 cabang di Kabupaten Cirebon<br>yang ditetapkan oleh OJK</p>
-
-					</div>
-					
-				</div>
-				</div>
-				<div class="pull-right">
-					<div class="col-lg-12 col-12">
-						<div class="button">
-							<a href="portfolio.html" class="bizwheel-btn theme-2" style="border-radius: 25px;">Cari Lokasi <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-						</div>
-					</div>
-				
-				</div>
-			</div>
-		</section>
-		<!--/ End OJK -->
-		<!-- Latest Blog -->
-		<section class="latest-blog section-space">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
-						<div class="section-title default text-center">
-							<div class="section-top">
-								<h1><span>Latest</span><b> Kabar Terkini</b></h1>
-							</div>
-							<div class="section-bottom">
-								<div class="text">
-									<p>Sementara belum ada kabar. Segera kami upload kabar terbaru secara tajam dan terpercaya</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-12">
-						<div class="blog-latest blog-latest-slider">
-							<div class="single-slider">
-								<div class="single-news ">
-									<div class="news-head overlay">
-										<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img1.png') }})"></span>
-										<a href="#" class="bizwheel-btn theme-2">Read more</a>
-									</div>
-									<div class="news-body">
-										<div class="news-content ext1">
-											<h3 class="news-title"><a href="404.html">Launching Virtual Acount &amp; kredit keppincut </a></h3>
-											<div class="news-text"><p>Launching Virtual Acount dan kredit keppincut dalam rangka percepatan akses keuangan</p></div>
-											<ul class="news-meta">
-												<li class="date"><i class="fa fa-calendar"></i>April 2020</li>
-												<li class="view"><i class="fa fa-comments"></i>0</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							
-							</div>
-							<div class="single-slider">
-								
-								<div class="single-news ">
-									<div class="news-head overlay">
-										<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img2.png') }})"></span>
-										<a href="#" class="bizwheel-btn theme-2">Read more</a>
-									</div>
-									<div class="news-body">
-										<div class="news-content ext1">
-											<h3 class="news-title"><a href="404.html">Bank BKC melakukan penyaluran Dana CSR</a></h3>
-											<div class="news-text"><p>Bank BKC melakukan penyaluran Dana CSR untuk pembangunan kelas baru.
-
-												Direktur Utama Bank BKC secara simbolis menyerahkan bantuan kepada yayasan sosial </p></div>
-											<ul class="news-meta">
-												<li class="date"><i class="fa fa-calendar"></i>Desember 2020</li>
-												<li class="view"><i class="fa fa-comments"></i>0</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								
-							</div>
-							<div class="single-slider">
-								
-								<div class="single-news ">
-									<div class="news-head overlay">
-										<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img3.png') }})"></span>
-										<a href="#" class="bizwheel-btn theme-2">Read more</a>
-									</div>
-									<div class="news-body">
-										<div class="news-content ">
-											<h3 class="news-title"><a href="404.html">Edukasi Literasi Keuangan Kepada Masyarakat</a></h3>
-											<div class="news-text"><p><div class="ext1">Sesuai SE Otoritas Jasa Keuangan (OJK) Nomor 30/SEOJK.07/2017 tentang Pelaksanaan </div></p></div>
-											<ul class="news-meta">
-												<li class="date"><i class="fa fa-calendar"></i>Januari 2021</li>
-												<li class="view"><i class="fa fa-comments"></i>0</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="single-slider">
-								<div class="single-news ">
-									<div class="news-head overlay">
-										<span class="news-img" style="background-image:url({{ asset('assets/frontend/img/berita/img4.png') }})"></span>
-										<a href="#" class="bizwheel-btn theme-2">Read more</a>
-									</div>
-									<div class="news-body">
-										<div class="news-content">
-											<h3 class="news-title"><a href="404.html">Seluruh Karyawan melaksanakan vaksin covid-19</a></h3>
-											<div class="news-text"><p>Direktur utama dan direktur operasional beserta seluruh Karyawan</p></div>
-											<ul class="news-meta">
-												<li class="date"><i class="fa fa-calendar"></i>Februari 2021</li>
-												<li class="view"><i class="fa fa-comments"></i>0</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> 
-		<!--/ End Latest Blog -->
-		
-		<!-- Client Area -->
-		<div class="clients " style="background-size: cover;background-position: center;background-image:url(assets/frontend/img/profil.png)">
-			
-			<div class="container">
-			
-					<marquee align="left"  onmouseout="this.start()" onmouseover="this.stop()" scrollamount="5">
-						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-1.png') }}" alt="#"></a>
-						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-2.png') }}" alt="#"></a>
-						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-3.png') }}" alt="#"></a>
-						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-4.png') }}" alt="#"></a>
-						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-5.png') }}" alt="#"></a>
-						<a href="#" target="_blank"><img src="{{ asset('assets/frontend/img/client/client-6.png') }}" alt="#"></a>
-					</marquee>
-						
-			</div>
-
-		</div>
-		<!--/ End Client Area -->
-		
 
 		<!-- Chat -->
 		@include('frontend.layout.chat')

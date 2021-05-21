@@ -139,7 +139,7 @@
 					padding: 0px 5px;
 					color:#fff;  
 				}
-				>.items{
+				.items{
 					display: block;
 					background: #23313f;
 					padding: 0px;
@@ -165,7 +165,7 @@
 						}
 					}
 				}
-				> a{
+				a{
 					color:#46efa4;
 					text-transform: uppercase;
 					font-weight: bold;
